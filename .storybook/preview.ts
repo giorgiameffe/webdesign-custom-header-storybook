@@ -3,6 +3,9 @@ import type { Preview } from '@storybook/react-vite';
 // Importa il file di reset CSS per azzerare gli stili di default del browser
 import "../src/styles/reset.css";
 
+// Importa le variabili CSS (es. spacing, colori, ecc.)
+import "../src/styles/variables.css";
+
 const preview: Preview = {
   parameters: {
     controls: {
