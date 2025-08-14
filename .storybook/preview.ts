@@ -6,6 +6,9 @@ import "../src/styles/reset.css";
 // Importa le variabili CSS (es. spacing, colori, ecc.)
 import "../src/styles/variables.css";
 
+// Importa il file di tipografia (font, pesi, dimensioni testo, ecc.)
+import "../src/styles/typography.css";
+
 const preview: Preview = {
   parameters: {
     controls: {
