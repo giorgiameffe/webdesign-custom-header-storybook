@@ -23,20 +23,6 @@
 
     /* Colors */
 
-    /* Hue: tonalità di base per la generazione di colori, espressa in gradi HSL (0–360) */
-    --hue-red: 25;
-    --hue-pink: 350;
-    --hue-purple: 310;
-    --hue-violet: 290;
-    --hue-indigo: 270;
-    --hue-blue: 240;
-    --hue-cyan: 210;
-    --hue-teal: 185;
-    --hue-green: 145;
-    --hue-lime: 125;
-    --hue-yellow: 100;
-    --hue-orange: 75;
-
     /* --- COLORI DEFINITI CON OKLCH --- */
     /*
         OKLCH è uno spazio colore moderno, più adatto all'accessibilità e alla percezione visiva umana.
