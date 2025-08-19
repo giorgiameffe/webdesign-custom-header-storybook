@@ -1,29 +1,39 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite"; // Importa i tipi di Storybook per Vite
+import { Logo } from "../components/Logo/Logo"; // Importa il componente Logo
 
-import { Logo } from "../components/Logo/Logo";
-
+// Configurazione principale del componente per Storybook
 const meta: Meta<typeof Logo> = {
-    title: "Components/Logo",
-    component: Logo,
+    title: "Components/Logo", // Titolo della sezione nella sidebar di Storybook
+    component: Logo, // Componente a cui questa story si riferisce
     parameters: {
-        layout: "centered",
+        layout: "centered", // Centra il componente nella preview
         docs: {
             description: {
                 component: "Componente che visualizza il nome del brand in forma testuale, usato come logo."
+                // Descrizione del componente per la documentazione
             }
         }
     },
-    tags: ["autodocs"],
+    tags: ["autodocs"], // Tag per l’autogenerazione della documentazione
     argTypes: {
-        text: { control: "text", description: "Contenuto testuale visualizzato come logo principale." }
+        text: {
+            control: "text", // Mostra un controllo testuale nel pannello Controls
+            description: "Contenuto testuale visualizzato come logo principale." // Descrizione della prop
+        }
     }
 };
 
-export default meta;
+export default meta; // Esporta la configurazione a Storybook
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>; // Definisce il tipo della story basata sul meta
 
+// Story di default del componente Logo
 export const Default: Story = {
-    args: { text: "My Brand" },
-    render: ({ text }) => <Logo text={text} />,
+
+    args: { text: "My Brand" }, // Valore di default della prop 'text'
+
+    render: ({ text }) => ( // Funzione che renderizza il componente con le props correnti
+
+        <Logo text={text} />
+    ),
 };
