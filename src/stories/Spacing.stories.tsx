@@ -2,7 +2,7 @@ import React from 'react';
 // Importare i tipi necessari da Storybook per definire i metadati e le storie
 import type { Meta, StoryObj } from '@storybook/react';
 
-import "./Spacing.css";
+import "../styles/spacing.css";
 
 // Definire i metadati.
 // - `title` è il nome che apparirà nella sidebar di Storybook.
@@ -45,60 +45,6 @@ const SpaceCalc = ({ value }: { value: string }) => {
     return <span>{spacing}</span>;
 }
 
-//  Componente di stile inline che inietta regole CSS personalizzate
-//  per il layout e la visualizzazione della lista `dl`.
-//  Nota: qui vengono definiti stili per `dl`, `dt`, `dd` e `.info`.
-
-const Style: React.FC = () => {
-
-    return (
-        <style>
-            {
-                `dl {
-                font-size: 1rem;
-                border: 1px solid #ccc;
-                display: grid;
-                max-width: calc(550rem/16);
-                grid-template-columns: 1fr 4fr 1fr;
-                border-bottom: none;
-                border-radius: 0.5rem;
-                }
-
-                dt {
-                font-weight: 600;
-                padding: var(--spacing-sm) var(--spacing-md);
-                border-bottom: 1px solid #ccc; 
-                }
-
-                dd {
-                padding: var(--spacing-sm) var(--spacing-md);
-                border-bottom: 1px solid #ccc;
-                font-family: monospace;
-                displaY: grid;
-                gap: 1ch;
-                grid-template-columns: subgrid;
-                grid-column: 2/4;
-                align-items: center;
-                }
-
-                .info {
-                background: magenta;
-                height: 2ch;
-                width: var(--story-spacing);
-                display: block;          
-                }
-
-                h1,
-                p {
-                text-align: start;
-                max-width: calc(550rem/16);
-                }
-
-                `
-            }
-        </style>
-    )
-}
 
 // Storia di default per definire lo spacing.
 // Crea una descrizione visiva delle variabili CSS di spaziatura, mostrandone:
@@ -110,7 +56,6 @@ export const Default: Story = {
     render: () => (
 
         <>
-            <Style />
             <h1>Spacing</h1>
             <p className='font-size-body'>
                 Our spacing variables use a clamping mechanism to ensure that the spacing is scalable across different screen size.
