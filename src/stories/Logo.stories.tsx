@@ -1,8 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-vite"; // Importa i tipi di Storybook per Vite
-import { Logo } from "../components/Logo/Logo"; // Importa il componente Logo
+// Importa i tipi di Storybook per Vite
+import type { Meta, StoryObj } from "@storybook/react-vite";
+
+// Importa il componente Logo
+import { Logo } from "../components/Logo/Logo";
 
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Logo> = {
+
     title: "Components/Logo", // Titolo della sezione nella sidebar di Storybook
     component: Logo, // Componente a cui questa story si riferisce
     parameters: {
@@ -23,9 +27,11 @@ const meta: Meta<typeof Logo> = {
     }
 };
 
-export default meta; // Esporta la configurazione a Storybook
+// Esporta la configurazione a Storybook
+export default meta;
 
-type Story = StoryObj<typeof meta>; // Definisce il tipo della story basata sul meta
+// Definisce il tipo della story basata sul meta
+type Story = StoryObj<typeof meta>;
 
 // Story di default del componente Logo
 export const Default: Story = {
