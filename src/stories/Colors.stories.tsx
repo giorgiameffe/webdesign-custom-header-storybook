@@ -35,7 +35,7 @@ export const Default: Story = {
             <h1>Colors - Natural Luxury Palette</h1>
 
             {/* --- GRIGI NATURALI --- */}
-            <h3>Gray</h3>
+            <h2>Gray</h2>
             <div className="container">
                 {Array.from({ length: 16 }).map((_, i) => (
                     <ClickToCopy
@@ -47,7 +47,7 @@ export const Default: Story = {
             </div>
 
             {/* --- VERDI NATURALI --- */}
-            <h3>Green</h3>
+            <h2>Green</h2>
             <div className="container">
                 {Array.from({ length: 16 }).map((_, i) => (
                     <ClickToCopy
@@ -59,7 +59,7 @@ export const Default: Story = {
             </div>
 
             {/* --- VIOLA E ACCENTI --- */}
-            <h3>Violet</h3>
+            <h2>Violet</h2>
             <div className="container">
                 {Array.from({ length: 16 }).map((_, i) => (
                     <ClickToCopy
