@@ -2,6 +2,8 @@ import React from 'react';
 // Importare i tipi necessari da Storybook per definire i metadati e le storie
 import type { Meta, StoryObj } from '@storybook/react';
 
+import "./Spacing.css";
+
 // Definire i metadati.
 // - `title` è il nome che apparirà nella sidebar di Storybook.
 // - `parameters.layout: 'centered'` centra il componente nel canvas.
