@@ -75,7 +75,7 @@ export const Default: Story = {
                             <span>
                                 <SpaceCalc value={`--spacing-${key}`} />
                             </span>
-                            <span className="info" />
+                            <span className="spacing-info" />
                         </dd>
                     </React.Fragment>
                 ))}

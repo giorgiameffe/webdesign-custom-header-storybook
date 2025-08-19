@@ -30,7 +30,7 @@ dd {
 }
 
 /* Blocco colorato che mostra visivamente lo spacing */
-.info {
+.spacing-info {
     background: magenta;
     height: 2ch;
     width: var(--story-spacing);
