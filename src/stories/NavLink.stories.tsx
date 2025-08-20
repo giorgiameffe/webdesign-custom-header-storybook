@@ -47,8 +47,8 @@ type Story = StoryObj<typeof meta>;
 // Story di default del NavLink
 export const Default: Story = {
     args: {
-        href: "/shop", // Valore di default della prop href
-        label: "Shop"  // Valore di default della prop label
+        href: "/home", // Valore di default della prop href
+        label: "Home"  // Valore di default della prop label
     },
 
     // Renderizza il componente con le props correnti

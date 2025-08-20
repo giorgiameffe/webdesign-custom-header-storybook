@@ -37,7 +37,7 @@ export const Default: Story = {
             { href: "/home", label: "Home" },
             { href: "/shop", label: "Shop" },
             { href: "/about", label: "About Us" },
-            { href: "/contact", label: "Contact" },
+            { href: "/contact", label: "Contact Us" },
         ]
     },
 
