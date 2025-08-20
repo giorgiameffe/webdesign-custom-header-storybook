@@ -22,7 +22,6 @@ dd {
     border-bottom: 1px solid #ccc;
     font-family: monospace;
     display: grid;
-    /* ⚠️ corretto il typo */
     gap: 1ch;
     grid-template-columns: subgrid;
     grid-column: 2/4;
