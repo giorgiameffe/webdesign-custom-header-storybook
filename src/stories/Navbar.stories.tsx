@@ -13,9 +13,7 @@ const meta: Meta<typeof Navbar> = {
         docs: {
             description: {
                 component:
-                    "Componente organismo che rappresenta la barra di navigazione principale di un sito web. " +
-                    "Contiene il logo nella parte sinistra e una lista di link di navigazione nella parte destra, " +
-                    "per creare un menu orizzontale completo e facilmente personalizzabile. Utile per strutturare la navigazione principale del sito.",
+                    "Componente organismo che rappresenta la barra di navigazione principale di un sito web. Contiene il logo nella parte sinistra e una lista di link di navigazione nella parte destra, per creare un menu orizzontale completo e facilmente personalizzabile. Utile per strutturare la navigazione principale del sito.",
             },
         },
     },
