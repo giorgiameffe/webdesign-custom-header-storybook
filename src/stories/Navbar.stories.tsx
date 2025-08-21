@@ -47,10 +47,10 @@ export const Default: Story = {
     args: {
         logoText: "My Brand", // Testo di default del logo
         links: [
-            { href: "/home", label: "Home" },      // Primo link della lista
-            { href: "/shop", label: "Shop" },      // Secondo link della lista
-            { href: "/about", label: "About Us" }, // Terzo link della lista
-            { href: "/contact", label: "Contact Us" } // Quarto link della lista
+            { label: "Home", onClick: () => console.log("Home clicked") },            // Primo link della lista
+            { label: "Shop", onClick: () => console.log("Shop clicked") },            // Secondo link della lista
+            { label: "About Us", onClick: () => console.log("About Us clicked") },    // Terzo link della lista
+            { label: "Contact Us", onClick: () => console.log("Contact Us clicked") } // Quarto link della lista
         ]
     },
 
