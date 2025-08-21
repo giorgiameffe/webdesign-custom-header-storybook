@@ -3,22 +3,26 @@ import type { ReactNode } from 'react';
 
 // Definizione delle props che il componente NavLink accetta
 export type NavLinkProps = {
-    href: string;        // URL di destinazione del link
-    label: string;       // Testo visibile del link
-    icon?: ReactNode;    // Icona opzionale da mostrare accanto al testo (può essere JSX, componente o immagine)
+    label: string;        // Testo visibile del link (obbligatorio)
+    icon?: ReactNode;     // Icona opzionale da mostrare accanto al testo
+    arialabel?: string;   // Etichetta per l'accessibilità (aria-label)
+    onClick?: () => void; // Callback opzionale chiamata quando l'utente clicca sul link
 };
 
 // Componente funzionale React che rappresenta un link di navigazione
-export const NavLink = ({ href, label, icon }: NavLinkProps) => {
+export const NavLink = ({ label, icon, arialabel, onClick }: NavLinkProps) => {
 
     return (
-        // Elemento <a> che punta all'URL specificato da href
-        <a href={href}>
+        // <button> viene usato per gestire l'interazione tramite click come azione
+        <button
+            aria-label={arialabel} // Attributo per l'accessibilità: descrive il contenuto del bottone
+            onClick={onClick}       // Callback chiamata quando l'utente clicca sul bottone
+        >
             {/* Mostra l'icona solo se viene fornita */}
             {icon && <span>{icon}</span>}
 
             {/* Mostra il testo del link */}
             <span>{label}</span>
-        </a>
+        </button>
     );
 };

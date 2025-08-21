@@ -23,17 +23,21 @@ const meta: Meta<typeof NavLink> = {
     },
     tags: ['autodocs'], // Tag per generazione automatica della documentazione
     argTypes: {
-        href: {
-            control: "text", // Mostra un campo di testo nei controlli di Storybook
-            description: "URL di destinazione del link." // Descrizione della prop href
-        },
         label: {
             control: "text",
             description: "Testo visibile all'interno del link." // Descrizione della prop label
         },
+        arialabel: {
+            control: "text",
+            description: "Etichetta per l'accessibilità da usare quando il testo visibile non è sufficiente (es. solo icona)."
+        },
         icon: {
             control: false, // Non mostrare controllo per l'icona (JSX/ReactNode non è modificabile facilmente nei controls)
             description: "Icona opzionale visualizzata accanto al testo del link." // Descrizione della prop icon
+        },
+        onClick: {
+            // Qui non usiamo `control: "action"` perché Storybook non riconosce "action" come tipo di controllo.
+            description: "Funzione chiamata quando l'utente clicca sul link (button)." // Descrizione della prop onClick
         }
     }
 };
@@ -47,12 +51,11 @@ type Story = StoryObj<typeof meta>;
 // Story di default del NavLink
 export const Default: Story = {
     args: {
-        href: "/home", // Valore di default della prop href
         label: "Home"  // Valore di default della prop label
     },
 
     // Renderizza il componente con le props correnti
-    render: ({ href, label }: NavLinkProps) => (
-        <NavLink href={href} label={label} />
+    render: ({ label, onClick }: NavLinkProps) => (
+        <NavLink label={label} onClick={onClick} />
     )
 };
