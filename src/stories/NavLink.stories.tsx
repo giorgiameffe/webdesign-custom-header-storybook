@@ -36,8 +36,8 @@ const meta: Meta<typeof NavLink> = {
             description: "Icona opzionale visualizzata accanto al testo del link." // Descrizione della prop icon
         },
         onClick: {
-            // Qui non usiamo `control: "action"` perché Storybook non riconosce "action" come tipo di controllo.
-            description: "Funzione chiamata quando l'utente clicca sul link (button)." // Descrizione della prop onClick
+            // Qui non si usa `control: "action"` perché Storybook non riconosce "action" come tipo di controllo.
+            description: "Funzione chiamata quando l'utente clicca sul link (in questo caso button)." // Descrizione della prop onClick
         }
     }
 };

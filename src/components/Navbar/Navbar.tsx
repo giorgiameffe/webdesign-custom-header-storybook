@@ -12,11 +12,11 @@ export type NavbarProps = {
     // Testo da mostrare nel logo
     logoText: string;
     // Lista dei link da passare a NavLinksList
-    links: NavLinksListProps["links"];
+    navItems: NavLinksListProps["navItems"];
 }
 
 // Componente Navbar: combina Logo e NavLinksList in un header
-export const Navbar = ({ logoText, links }: NavbarProps) => {
+export const Navbar = ({ logoText, navItems }: NavbarProps) => {
 
     return (
         // Elemento <header> semantico per la barra di navigazione
@@ -25,7 +25,7 @@ export const Navbar = ({ logoText, links }: NavbarProps) => {
             <Logo text={logoText} />
 
             {/* Lista dei link di navigazione */}
-            <NavLinksList links={links} />
+            <NavLinksList navItems={navItems} />
         </header>
     )
 }

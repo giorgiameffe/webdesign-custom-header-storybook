@@ -28,7 +28,7 @@ const meta: Meta<typeof Navbar> = {
             description: "Testo visualizzato come logo nella sezione sinistra della Navbar. Rappresenta l’identità del brand e viene mostrato tramite il componente atomico `Logo`."
             // Descrizione della prop logoText
         },
-        links: {
+        navItems: {
             control: "object", // Mostra un campo oggetto nei controlli di Storybook
             description: "Array di oggetti `NavLinkProps` che definiscono i link posizionati a destra del logo. Ogni oggetto rappresenta un link singolo con `href`, `label` e un’icona opzionale `icon`. Ideale per costruire menu di navigazione chiari e organizzati."
             // Descrizione della prop links
@@ -46,7 +46,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         logoText: "My Brand", // Testo di default del logo
-        links: [
+        navItems: [
             { label: "Home", onClick: () => console.log("Home clicked") },            // Primo link della lista
             { label: "Shop", onClick: () => console.log("Shop clicked") },            // Secondo link della lista
             { label: "About Us", onClick: () => console.log("About Us clicked") },    // Terzo link della lista
@@ -55,7 +55,7 @@ export const Default: Story = {
     },
 
     // Renderizza il componente con le props correnti
-    render: ({ logoText, links }: NavbarProps) => (
-        <Navbar logoText={logoText} links={links} />
+    render: ({ logoText, navItems }: NavbarProps) => (
+        <Navbar logoText={logoText} navItems={navItems} />
     )
 };

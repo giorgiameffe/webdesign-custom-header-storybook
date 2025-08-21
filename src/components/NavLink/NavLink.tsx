@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 export type NavLinkProps = {
     label: string;        // Testo visibile del link (obbligatorio)
     icon?: ReactNode;     // Icona opzionale da mostrare accanto al testo
-    arialabel?: string;   // Etichetta per l'accessibilità (aria-label)
+    arialabel?: string;   // Etichetta per l'accessibilità (aria-label)y
     onClick?: () => void; // Callback opzionale chiamata quando l'utente clicca sul link
 };
 

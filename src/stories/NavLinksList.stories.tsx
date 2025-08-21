@@ -23,7 +23,7 @@ const meta: Meta<typeof NavLinksList> = {
     },
     tags: ['autodocs'], // Tag per generazione automatica della documentazione
     argTypes: {
-        links: {
+        navItems: {
             control: "object", // Mostra un campo oggetto nei controlli di Storybook
             description: "Lista di oggetti `NavLinkProps`. Ogni elemento rappresenta un link con `href`, `label` e opzionalmente `icon`."
             // Descrizione della prop links
@@ -40,7 +40,7 @@ type Story = StoryObj<typeof meta>;
 // Story di default del NavLinksList
 export const Default: Story = {
     args: {
-        links: [
+        navItems: [
             { label: "Home", onClick: () => console.log("Home clicked") },             // Primo link della lista
             { label: "Shop", onClick: () => console.log("Shop clicked") },             // Secondo link della lista
             { label: "About Us", onClick: () => console.log("About Us clicked") },     // Terzo link della lista
@@ -49,7 +49,7 @@ export const Default: Story = {
     },
 
     // Renderizza il componente con le props correnti
-    render: ({ links }: NavLinksListProps) => (
-        <NavLinksList links={links} />
+    render: ({ navItems }: NavLinksListProps) => (
+        <NavLinksList navItems={navItems} />
     )
 };
