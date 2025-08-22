@@ -1,6 +1,7 @@
-// Importa il tipo ReactNode di React, utile per tipizzare elementi JSX, componenti o testo
+// Importazione il tipo ReactNode di React, utile per tipizzare elementi JSX, componenti o testo
 import type { ReactNode } from 'react';
 
+// Importazione NavLink css
 import "./NavLink.css";
 
 // Definizione delle props che il componente NavLink accetta
