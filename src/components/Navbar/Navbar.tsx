@@ -7,6 +7,8 @@ import { NavLinksList } from "../NavLinksList/NavLinksList";
 // Importa il tipo delle props di NavLinksList
 import type { NavLinksListProps } from "../NavLinksList/NavLinksList";
 
+import "./Navbar.css";
+
 // Definizione delle props del componente Navbar
 export type NavbarProps = {
     // Testo da mostrare nel logo
@@ -22,14 +24,21 @@ export const Navbar = ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) =
 
     return (
         // Elemento <header> semantico per la barra di navigazione
-        <header>
+        <header className="navbar-container">
+            <div>
+                {/* Lista dei link di navigazione sx */}
+                <NavLinksList navItems={navItemsLeft} />
+            </div>
 
-            <NavLinksList navItems={navItemsLeft} />
-            {/* Logo del sito */}
-            <Logo text={logoText} />
+            <div>
+                {/* Logo del sito */}
+                <Logo text={logoText} />
+            </div>
 
-            {/* Lista dei link di navigazione */}
-            <NavLinksList navItems={navItemsRight} />
+            <div>
+                {/* Lista dei link di navigazione dx */}
+                <NavLinksList navItems={navItemsRight} />
+            </div>
         </header>
     )
 }
