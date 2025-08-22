@@ -28,10 +28,15 @@ const meta: Meta<typeof Navbar> = {
             description: "Testo visualizzato come logo nella sezione sinistra della Navbar. Rappresenta l’identità del brand e viene mostrato tramite il componente atomico `Logo`."
             // Descrizione della prop logoText
         },
-        navItems: {
-            control: "object", // Mostra un campo oggetto nei controlli di Storybook
-            description: "Array di oggetti `NavLinkProps` che definiscono i link posizionati a destra del logo. Ogni oggetto rappresenta un link singolo con `href`, `label` e un’icona opzionale `icon`. Ideale per costruire menu di navigazione chiari e organizzati."
-            // Descrizione della prop links
+        navItemsLeft: {
+            // Mostra un campo "object" nei controlli di Storybook per permettere di inserire array di link
+            control: "object",
+            description: "Array di oggetti `NavLinkProps` che definiscono i link posizionati a sinistra del logo. Ogni oggetto rappresenta un link singolo con `href`, `label` e un’icona opzionale `icon`. Ideale per inserire sezioni principali del sito (es. Home, Shop..)."
+        },
+        navItemsRight: {
+            // Anche qui un campo "object" nei controlli di Storybook
+            control: "object",
+            description: "Array di oggetti `NavLinkProps` che definiscono i link posizionati a destra del logo. Pensati per le azioni utente come Carrello, Wishlist, Profilo/Accesso. Ogni link può avere un’icona per migliorare l’usabilità."
         }
     }
 };
@@ -46,16 +51,20 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         logoText: "My Brand", // Testo di default del logo
-        navItems: [
-            { label: "Home", onClick: () => console.log("Home clicked") },            // Primo link della lista
-            { label: "Shop", onClick: () => console.log("Shop clicked") },            // Secondo link della lista
-            { label: "About Us", onClick: () => console.log("About Us clicked") },    // Terzo link della lista
-            { label: "Contact Us", onClick: () => console.log("Contact Us clicked") } // Quarto link della lista
+        navItemsLeft: [
+            { label: "Home", onClick: () => console.log("Home clicked") },            // Primo link della lista sx
+            { label: "Shop", onClick: () => console.log("Shop clicked") },            // Secondo link della lista sx
+            { label: "About Us", onClick: () => console.log("About Us clicked") },    // Terzo link della lista sx
+        ],
+        navItemsRight: [
+            { label: "Cart", onClick: () => console.log("Cart clicked") },            // Primo link della lista dx
+            { label: "Wishlist", onClick: () => console.log("Wishlist clicked") },    // Secondo link della lista dx
+            { label: "User", onClick: () => console.log("User clicked") },            // Terzo link della lista dx
         ]
     },
 
     // Renderizza il componente con le props correnti
-    render: ({ logoText, navItems }: NavbarProps) => (
-        <Navbar logoText={logoText} navItems={navItems} />
+    render: ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) => (
+        <Navbar logoText={logoText} navItemsLeft={navItemsLeft} navItemsRight={navItemsRight} />
     )
 };
