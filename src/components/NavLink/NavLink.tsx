@@ -1,6 +1,8 @@
 // Importa il tipo ReactNode di React, utile per tipizzare elementi JSX, componenti o testo
 import type { ReactNode } from 'react';
 
+import "./NavLink.css";
+
 // Definizione delle props che il componente NavLink accetta
 export type NavLinkProps = {
     label: string;        // Testo visibile del link (obbligatorio)
@@ -17,6 +19,7 @@ export const NavLink = ({ label, icon, arialabel, onClick }: NavLinkProps) => {
         <button
             aria-label={arialabel} // Attributo per l'accessibilità: descrive il contenuto del bottone
             onClick={onClick}       // Callback chiamata quando l'utente clicca sul bottone
+            className='nav-item'
         >
             {/* Mostra l'icona solo se viene fornita */}
             {icon && <span>{icon}</span>}
