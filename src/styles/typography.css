@@ -8,6 +8,11 @@ html {
     font-family: "Raleway", sans-serif;
 }
 
+/* Impostazione font Playfair DIsplay per il logo */
+#logo-text {
+    font-family: "Playfair Display", serif;
+}
+
 /* Dimensione del testo base, controllata tramite una variabile CSS */
 body {
     font-size: var(--font-size-body);

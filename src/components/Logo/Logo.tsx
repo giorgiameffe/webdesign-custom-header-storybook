@@ -8,6 +8,6 @@ export type LogoProps = {
 export const Logo = ({ text }: LogoProps) => {
     // Ritorna un elemento <div> contenente il testo del logo
     return (
-        <div>{text}</div>
+        <div id="logo-text">{text}</div>
     )
 }
