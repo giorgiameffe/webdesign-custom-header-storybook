@@ -1,8 +1,11 @@
-// Importa il componente atomico NavLink
+// Importazione il componente atomico NavLink
 import { NavLink } from "../NavLink/NavLink";
 
-// Importa il tipo delle props del componente NavLink
+// Importazione il tipo delle props del componente NavLink
 import type { NavLinkProps } from "../NavLink/NavLink";
+
+// Importazione NavLinksList css
+import "./NavLinksList.css"
 
 // Definizione delle props di NavLinksList
 export type NavLinksListProps = {
@@ -17,7 +20,7 @@ export const NavLinksList = ({ navItems }: NavLinksListProps) => {
         // Elemento <nav> semantico per la navigazione
         <nav>
             {/* Lista non ordinata dei link */}
-            <ul>
+            <ul className="nav-items-list">
                 {/* Mappa ogni link dell'array in un <li> contenente un NavLink */}
                 {navItems.map((navItem, index) =>
                     <li key={index}>
