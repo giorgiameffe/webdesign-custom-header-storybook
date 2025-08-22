@@ -1,3 +1,5 @@
+import "./Logo.css";
+
 // Definisce il tipo delle props che il componente Logo si aspetta
 export type LogoProps = {
     // `text` è la stringa da visualizzare come logo
