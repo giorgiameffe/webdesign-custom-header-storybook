@@ -1,17 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:&display=swap");
+/* Importazione dei font da Google Fonts:
+   - Playfair Display (per logo)
+   - Raleway (per testi) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
+/* Impostazione come font principale di default Raleway */
 html {
-    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
+/* Dimensione del testo base, controllata tramite una variabile CSS */
 body {
     font-size: var(--font-size-body);
 }
 
+/* Classe di utilità per font-size "hero" (grandi titoli introduttivi) */
 .font-size-hero {
     font-size: var(--font-size-hero);
 }
 
+/* Regole comuni per i titoli (h1–h6) e classi equivalenti.
+   - Imposta la dimensione usando variabili CSS
+   - Aggiunge un margine sotto
+   - Usa text-wrap: balance per rendere più armoniosa la distribuzione delle righe */
 :where(h1, .font-size-h1) {
     font-size: var(--font-size-h1);
     margin-bottom: 0.25em;
@@ -48,15 +58,20 @@ body {
     text-wrap: balance;
 }
 
+/* Paragrafi e testi con classe .font-size-body:
+   - dimensione del testo presa dalla variabile
+   - margine inferiore per spazio tra paragrafi */
 :where(p, .font-size-body) {
     font-size: var(--font-size-body);
     margin-bottom: 1em;
 }
 
+/* Testi più piccoli (tag <small> o classe .font-size-sm) */
 :where(small, .font-size-sm) {
     font-size: var(--font-size-sm);
 }
 
+/* Testi extra-small */
 :where(.font-size-xs) {
     font-size: var(--font-size-xs);
 }
