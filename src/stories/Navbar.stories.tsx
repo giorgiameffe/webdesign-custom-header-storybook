@@ -38,7 +38,7 @@ const meta: Meta<typeof Navbar> = {
             control: "object",
             description: "Array di oggetti `NavLinkProps` che definiscono i link posizionati a destra del logo. Pensati per le azioni utente come Carrello, Wishlist, Profilo/Accesso. Ogni link può avere un’icona per migliorare l’usabilità."
         }
-    }
+    },
 };
 
 // Esporta la configurazione a Storybook

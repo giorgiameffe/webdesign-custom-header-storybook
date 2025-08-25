@@ -13,9 +13,9 @@ import "./Navbar.css";
 export type NavbarProps = {
     // Testo da mostrare nel logo
     logoText: string;
-    // Lista dei link da passare a NavLinksList
+    // Lista dei link da passare a NavLinksList sx
     navItemsLeft: NavLinksListProps["navItems"];
-
+    // Lista dei link da passare a NavLinksList dx
     navItemsRight: NavLinksListProps["navItems"];
 }
 

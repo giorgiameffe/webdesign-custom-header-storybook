@@ -50,6 +50,6 @@ export const Default: Story = {
 
     // Renderizza il componente con le props correnti
     render: ({ navItems }: NavLinksListProps) => (
-        <NavLinksList navItems={navItems} />
+        <NavLinksList navItems={navItems} ariaLabel="Menu List" />
     )
 };
