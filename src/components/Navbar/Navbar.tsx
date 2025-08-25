@@ -27,7 +27,7 @@ export const Navbar = ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) =
         <header className="navbar-container">
             <div>
                 {/* Lista dei link di navigazione sx */}
-                <NavLinksList navItems={navItemsLeft} />
+                <NavLinksList navItems={navItemsLeft} ariaLabel="Shop Menu" />
             </div>
 
             <div>
@@ -37,7 +37,7 @@ export const Navbar = ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) =
 
             <div>
                 {/* Lista dei link di navigazione dx */}
-                <NavLinksList navItems={navItemsRight} />
+                <NavLinksList navItems={navItemsRight} ariaLabel="User Menu" />
             </div>
         </header>
     )
