@@ -27,7 +27,7 @@ const meta: Meta<typeof NavLink> = {
             control: "text",
             description: "Testo visibile all'interno del link." // Descrizione della prop label
         },
-        arialabel: {
+        ariaLabel: {
             control: "text",
             description: "Etichetta per l'accessibilità da usare quando il testo visibile non è sufficiente (es. solo icona)."
         },
@@ -48,10 +48,53 @@ export default meta;
 // Definisce il tipo Story basato sul meta
 type Story = StoryObj<typeof meta>;
 
-// Story di default del NavLink
+
+// Story di Default del NavLink
 export const Default: Story = {
     args: {
         label: "Home"  // Valore di default della prop label
+    },
+
+    // Renderizza il componente con le props correnti
+    render: ({ label, onClick }: NavLinkProps) => (
+        <NavLink label={label} onClick={onClick} />
+    )
+};
+
+
+// Story del NavLink Hover
+export const Hover: Story = {
+    args: {
+        label: "Home",  // Valore di default della prop label
+        state: "hover"  // Stato Hover
+    },
+
+    // Renderizza il componente con le props correnti
+    render: ({ label, onClick }: NavLinkProps) => (
+        <NavLink label={label} onClick={onClick} />
+    )
+};
+
+
+// Story del NavLink Active
+export const Active: Story = {
+    args: {
+        label: 'Home',  // Valore di default della prop label
+        state: 'active' // Stato Active
+    },
+
+    // Renderizza il componente con le props correnti
+    render: ({ label, onClick }: NavLinkProps) => (
+        <NavLink label={label} onClick={onClick} />
+    )
+};
+
+
+// Story del NavLink Focus
+export const Focus: Story = {
+    args: {
+        label: 'Home',  // Valore di default della prop label
+        state: 'focus' // Stato Focus
     },
 
     // Renderizza il componente con le props correnti
