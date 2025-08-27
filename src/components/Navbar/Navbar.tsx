@@ -9,6 +9,8 @@ import type { NavLinksListProps } from "../NavLinksList/NavLinksList";
 
 import "./Navbar.css";
 
+// import { useState } from "react";
+
 // Definizione delle props del componente Navbar
 export type NavbarProps = {
     // Testo da mostrare nel logo
@@ -22,23 +24,29 @@ export type NavbarProps = {
 // Componente Navbar: combina Logo e NavLinksList in un header
 export const Navbar = ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) => {
 
+    // Elemento <header> semantico per la barra di navigazione
+    // const [activeLeft, setActiveLeft] = useState<number | null>(null);
+    // const [activeRight, setActiveRight] = useState<number | null>(null);
+
     return (
-        // Elemento <header> semantico per la barra di navigazione
         <header className="navbar-container">
             <div>
-                {/* Lista dei link di navigazione sx */}
-                <NavLinksList navItems={navItemsLeft} ariaLabel="Shop Menu" />
+                <NavLinksList
+                    navItems={navItemsLeft}
+                    ariaLabel="Shop Menu"
+                />
             </div>
 
             <div>
-                {/* Logo del sito */}
                 <Logo text={logoText} />
             </div>
 
             <div>
-                {/* Lista dei link di navigazione dx */}
-                <NavLinksList navItems={navItemsRight} ariaLabel="User Menu" />
+                <NavLinksList
+                    navItems={navItemsRight}
+                    ariaLabel="User Menu"
+                />
             </div>
         </header>
-    )
-}
+    );
+};

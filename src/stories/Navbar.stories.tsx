@@ -4,9 +4,6 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 // Importa il componente Navbar
 import { Navbar } from "../components/Navbar/Navbar";
 
-// Importa il tipo delle props del componente Navbar
-import type { NavbarProps } from "../components/Navbar/Navbar";
-
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Navbar> = {
 
@@ -52,19 +49,67 @@ export const Default: Story = {
     args: {
         logoText: "My Brand", // Testo di default del logo
         navItemsLeft: [
-            { label: "Home", onClick: () => console.log("Home clicked") },            // Primo link della lista sx
-            { label: "Shop", onClick: () => console.log("Shop clicked") },            // Secondo link della lista sx
-            { label: "About Us", onClick: () => console.log("About Us clicked") },    // Terzo link della lista sx
+            {
+                label: "Home",                                    // Primo link della lista sx
+                onClick: () => console.log("Home clicked")
+            },
+            {
+                label: "Shop",                                    // Secondo link della lista sx
+                onClick: () => console.log("Shop clicked")
+            },
+            {
+                label: "About Us",                                // Terzo link della lista sx
+                onClick: () => console.log("About Us clicked")
+            },
         ],
         navItemsRight: [
-            { label: "Cart", onClick: () => console.log("Cart clicked") },            // Primo link della lista dx
-            { label: "Wishlist", onClick: () => console.log("Wishlist clicked") },    // Secondo link della lista dx
-            { label: "User", onClick: () => console.log("User clicked") },            // Terzo link della lista dx
+            {
+                label: "Cart",                                    // Primo link della lista dx
+                onClick: () => console.log("Cart clicked")
+            },
+            {
+                label: "Wishlist",                                // Secondo link della lista dx
+                onClick: () => console.log("Wishlist clicked")
+            },
+            {
+                label: "User",                                    // Terzo link della lista dx
+                onClick: () => console.log("User clicked")
+            },
         ]
     },
+};
 
-    // Renderizza il componente con le props correnti
-    render: ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) => (
-        <Navbar logoText={logoText} navItemsLeft={navItemsLeft} navItemsRight={navItemsRight} />
-    )
+export const Selected: Story = {
+    args: {
+        logoText: "My Brand", // Testo di default del logo
+        navItemsLeft: [
+            {
+                label: "Home",                                    // Primo link della lista sx
+                onClick: () => console.log("Home clicked"),
+                selected: true
+            },
+            {
+                label: "Shop",                                    // Secondo link della lista sx
+                onClick: () => console.log("Shop clicked")
+            },
+            {
+                label: "About Us",                                // Terzo link della lista sx
+                onClick: () => console.log("About Us clicked")
+            },
+        ],
+        navItemsRight: [
+            {
+                label: "Cart",                                    // Primo link della lista dx
+                onClick: () => console.log("Cart clicked")
+            },
+            {
+                label: "Wishlist",                                // Secondo link della lista dx
+                onClick: () => console.log("Wishlist clicked")
+            },
+            {
+                label: "User",                                    // Terzo link della lista dx
+                onClick: () => console.log("User clicked")
+            },
+        ]
+    },
 };
