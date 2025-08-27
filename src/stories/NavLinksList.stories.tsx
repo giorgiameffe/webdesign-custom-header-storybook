@@ -52,14 +52,22 @@ export const Default: Story = {
                 onClick: () => console.log("About Us clicked")
             },
             {
-                label: "Contact Us",                                  // Quarto link della lista
-                onClick: () => console.log("Contact Us clicked")
+                label: "Cart",
+                onClick: () => console.log("Cart clicked")
+            },
+            {
+                label: "Wishlist",
+                onClick: () => console.log("Wishlist clicked")
+            },
+            {
+                label: "User",
+                onClick: () => console.log("User clicked")
             }
         ]
     },
 };
 
-// Story di default del NavLinksList
+// Story del NavLinksList Selected
 export const Selected: Story = {
     args: {
         navItems: [
@@ -77,9 +85,17 @@ export const Selected: Story = {
                 onClick: () => console.log("About Us clicked")
             },
             {
-                label: "Contact Us",                                  // Quarto link della lista
-                onClick: () => console.log("Contact Us clicked")
-            }
+                label: "Cart",
+                onClick: () => console.log("Cart clicked")
+            },
+            {
+                label: "Wishlist",
+                onClick: () => console.log("Wishlist clicked")
+            },
+            {
+                label: "User",
+                onClick: () => console.log("User clicked")
+            },
         ]
     },
 };
