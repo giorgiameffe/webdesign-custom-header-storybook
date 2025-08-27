@@ -4,9 +4,6 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 // Importa il componente NavLinksList
 import { NavLinksList } from "../components/NavLinksList/NavLinksList";
 
-// Importa il tipo delle props del componente
-import type { NavLinksListProps } from "../components/NavLinksList/NavLinksList";
-
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof NavLinksList> = {
 
@@ -41,15 +38,22 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         navItems: [
-            { label: "Home", onClick: () => console.log("Home clicked") },             // Primo link della lista
-            { label: "Shop", onClick: () => console.log("Shop clicked") },             // Secondo link della lista
-            { label: "About Us", onClick: () => console.log("About Us clicked") },     // Terzo link della lista
-            { label: "Contact Us", onClick: () => console.log("Contact Us clicked") }  // Quarto link della lista
+            {
+                label: "Home",                                        // Primo link della lista
+                onClick: () => console.log("Home clicked")
+            },
+            {
+                label: "Shop",                                        // Secondo link della lista
+                onClick: () => console.log("Shop clicked")
+            },
+            {
+                label: "About Us",                                    // Terzo link della lista
+                onClick: () => console.log("About Us clicked")
+            },
+            {
+                label: "Contact Us",                                  // Quarto link della lista
+                onClick: () => console.log("Contact Us clicked")
+            }
         ]
     },
-
-    // Renderizza il componente con le props correnti
-    render: ({ navItems }: NavLinksListProps) => (
-        <NavLinksList navItems={navItems} ariaLabel="Menu List" />
-    )
 };
