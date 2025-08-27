@@ -33,6 +33,7 @@ const meta: Meta<typeof NavLink> = {
             description: "Icona opzionale visualizzata accanto al testo del link." // Descrizione della prop icon
         },
         onClick: {
+            action: "clicked",
             // Qui non si usa `control: "action"` perché Storybook non riconosce "action" come tipo di controllo.
             description: "Funzione chiamata quando l'utente esegue un click." // Descrizione della prop onClick
         },
@@ -59,10 +60,20 @@ export const Default: Story = {
 };
 
 
-// Story del NavLink Active
+// Story del NavLink Selected
 export const Selected: Story = {
     args: {
-        label: 'Home',  // Valore di default della prop label
-        selected: true // Stato Active
+        label: "Home",  // Valore di default della prop label
+        selected: true // Stato Selected
     },
 };
+
+export const Interactive: Story = {
+    args: {
+        label: "Home",
+        selected: false
+    },
+    argTypes: {
+        selected: { control: "boolean" }
+    }
+}
