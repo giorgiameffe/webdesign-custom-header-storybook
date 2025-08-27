@@ -8,7 +8,7 @@
     font-weight: 500;
     cursor: pointer;
     border: none;
-    background-color: var(--color-gray-0);
+    background-color: transparent;
     color: var(--color-gray-13);
     border-bottom: 2px solid transparent;
     transition: color 0.4s ease, border 0.4s ease-in;
@@ -16,8 +16,8 @@
 
 /* Hover */
 .nav-item:hover {
-    color: var(--color-green-9);
-    border-bottom-color: var(--color-green-9);
+    color: var(--color-green-8);
+    border-bottom-color: var(--color-green-8);
 }
 
 /* Selezionato */
