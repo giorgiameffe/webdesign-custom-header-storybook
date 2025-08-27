@@ -2,7 +2,7 @@
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: 500;
@@ -61,4 +61,8 @@
 
 .nav-item-selected:hover::after {
     background-color: var(--color-purple-7);
+}
+
+.nav-items-list {
+    gap: 0.8rem;
 }
