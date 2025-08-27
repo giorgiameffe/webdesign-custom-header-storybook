@@ -4,9 +4,6 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 // Importa il componente NavLink
 import { NavLink } from "../components/NavLink/NavLink";
 
-// Importa il tipo delle props del componente
-import type { NavLinkProps } from "../components/NavLink/NavLink";
-
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof NavLink> = {
 
@@ -38,6 +35,10 @@ const meta: Meta<typeof NavLink> = {
         onClick: {
             // Qui non si usa `control: "action"` perché Storybook non riconosce "action" come tipo di controllo.
             description: "Funzione chiamata quando l'utente esegue un click." // Descrizione della prop onClick
+        },
+        selected: {
+            control: 'boolean',
+            description: "Stato di selezione del link."
         }
     }
 };
@@ -52,53 +53,16 @@ type Story = StoryObj<typeof meta>;
 // Story di Default del NavLink
 export const Default: Story = {
     args: {
-        label: "Home"  // Valore di default della prop label
-    },
-
-    // Renderizza il componente con le props correnti
-    render: ({ label, onClick }: NavLinkProps) => (
-        <NavLink label={label} onClick={onClick} />
-    )
-};
-
-
-// Story del NavLink Hover
-export const Hover: Story = {
-    args: {
         label: "Home",  // Valore di default della prop label
-        state: "hover"  // Stato Hover
+        selected: false
     },
-
-    // Renderizza il componente con le props correnti
-    render: ({ label, onClick }: NavLinkProps) => (
-        <NavLink label={label} onClick={onClick} />
-    )
 };
 
 
 // Story del NavLink Active
-export const Active: Story = {
+export const Selected: Story = {
     args: {
         label: 'Home',  // Valore di default della prop label
-        state: 'active' // Stato Active
+        selected: true // Stato Active
     },
-
-    // Renderizza il componente con le props correnti
-    render: ({ label, onClick }: NavLinkProps) => (
-        <NavLink label={label} onClick={onClick} />
-    )
-};
-
-
-// Story del NavLink Focus
-export const Focus: Story = {
-    args: {
-        label: 'Home',  // Valore di default della prop label
-        state: 'focus' // Stato Focus
-    },
-
-    // Renderizza il componente con le props correnti
-    render: ({ label, onClick }: NavLinkProps) => (
-        <NavLink label={label} onClick={onClick} />
-    )
 };
