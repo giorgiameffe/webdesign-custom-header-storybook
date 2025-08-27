@@ -4,6 +4,10 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 // Importa il componente Navbar
 import { Navbar } from "../components/Navbar/Navbar";
 
+import type { NavbarProps } from "../components/Navbar/Navbar";
+
+import { useState } from "react";
+
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Navbar> = {
 
@@ -111,5 +115,73 @@ export const Selected: Story = {
                 onClick: () => console.log("User clicked")
             },
         ]
+    },
+};
+
+// Story interattiva con toggle dei link selezionati
+export const InteractiveNavbar: Story = {
+    args: {
+        logoText: "My Brand",
+        navItemsLeft: [
+            {
+                label: "Home",
+                onClick: () => console.log("Home clicked")
+            },
+            {
+                label: "Shop",
+                onClick: () => console.log("Shop clicked")
+            },
+            {
+                label: "About Us",
+                onClick: () => console.log("About Us clicked")
+            },
+        ],
+        navItemsRight: [
+            {
+                label: "Cart",
+                onClick: () => console.log("Cart clicked")
+            },
+            {
+                label: "Wishlist",
+                onClick: () => console.log("Wishlist clicked")
+            },
+            {
+                label: "User",
+                onClick: () => console.log("User clicked")
+            },
+        ],
+    },
+
+    // Funzione render per mostrare il componente nella story
+    render: (args: NavbarProps) => {
+
+        // Stato interno unico per tracciare quale link è selezionato
+        // Se nessun link ha `selected: true`, lo stato iniziale sarà null
+        const [activeLabel, setActiveLabel] = useState<string | null>(null);
+
+        // Mappa i link di sinistra per aggiungere la logica di selezione
+        const leftItems = args.navItemsLeft.map(item => ({
+            ...item, // Copia tutte le proprietà originali
+            selected: item.label === activeLabel, // Imposta `selected` se il label corrisponde allo stato
+            onClick: () => {
+                setActiveLabel(item.label); // Aggiorna lo stato con il link cliccato
+                item.onClick?.();          // Chiama la funzione originale se presente
+            },
+        }));
+
+        // Mappa i link di destra con la stessa logica
+        const rightItems = args.navItemsRight.map(item => ({
+            ...item,
+            selected: item.label === activeLabel,
+            onClick: () => {
+                setActiveLabel(item.label); // Aggiorna lo stato per la lista di destra
+                item.onClick?.();           // Chiama la funzione originale se presente
+            },
+        }));
+
+        // Restituisce il componente Navbar con i link aggiornati
+        // Navbar riceve le liste con la proprietà `selected` aggiornata
+        // Passa i link aggiornati al componente Navbar
+        return <Navbar logoText={args.logoText} navItemsLeft={leftItems} navItemsRight={rightItems} />;
     },
 };
