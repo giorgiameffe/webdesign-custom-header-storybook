@@ -42,7 +42,6 @@ export const Default: Story = {
             {
                 label: "Home",                                        // Primo link della lista
                 onClick: () => console.log("Home clicked"),
-                selected: true
             },
             {
                 label: "Shop",                                        // Secondo link della lista
