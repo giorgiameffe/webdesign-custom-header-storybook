@@ -67,13 +67,3 @@ export const Selected: Story = {
         selected: true // Stato Selected
     },
 };
-
-export const Interactive: Story = {
-    args: {
-        label: "Home",
-        selected: false
-    },
-    argTypes: {
-        selected: { control: "boolean" }
-    }
-}
