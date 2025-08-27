@@ -1,4 +1,4 @@
-/* Stile base del link di navigazione */
+/* Stile base */
 .nav-item {
     display: flex;
     align-items: center;
@@ -8,61 +8,57 @@
     font-weight: 500;
     cursor: pointer;
     border: none;
-    background-color: transparent;
-    color: var(--color-gray-8);
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s ease;
+    background-color: var(--color-gray-0);
+    color: var(--color-gray-13);
+    border-bottom: 2px solid transparent;
+    transition: color 0.4s ease, border 0.4s ease-in;
 }
 
-/* Effetto di sottolineatura che si espande */
-.nav-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-green-7);
-    transition: width 0.3s ease;
-}
-
-/* Stile hover: il testo cambia colore e la sottolineatura si espande */
+/* Hover */
 .nav-item:hover {
-    color: var(--color-green-7);
+    color: var(--color-green-9);
+    border-bottom-color: var(--color-green-9);
 }
 
-.nav-item:hover::after {
-    width: 100%;
-}
-
-/* Stile per il link selezionato */
+/* Selezionato */
 .nav-item-selected {
-    color: var(--color-purple-7);
+    color: var(--color-green-10);
     font-weight: 600;
-    background-color: transparent;
+    border-bottom-color: var(--color-green-10);
 }
 
-/* Sottolineatura fissa all'elemento selezionato */
-.nav-item-selected::after,
-.nav-item-selected::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-purple-7);
-}
-
+/* Evita cambiamenti a hover sul selezionato */
 .nav-item-selected:hover {
-    color: var(--color-purple-7);
+    color: var(--color-green-10);
+    border-bottom-color: var(--color-green-10);
 }
 
-.nav-item-selected:hover::after {
-    background-color: var(--color-purple-7);
+/* Focus da tastiera */
+.nav-item:focus-visible {
+    outline: none;
+    /* rimuove l’outline di default */
+    box-shadow: 0 0 12px 4px rgba(32, 173, 91, 0.2);
+    /* alone verde chiaro e sfumato */
+    border: 1px solid var(--color-gray-10);
+    /* bordo molto chiaro */
+    color: var(--color-gray-13);
+    border-radius: 4px;
+    transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
 }
+
+.nav-item-selected:focus-visible {
+    outline: none;
+    box-shadow: 0 0 14px 4px rgba(220, 252, 231, 0.25);
+    /* alone leggero per selezionato */
+    border: 1px solid rgba(220, 252, 231, 0.15);
+    /* bordo chiaro */
+    color: var(--color-green-13);
+    border-radius: 4px;
+    transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+/* Lista dei link */
 
 .nav-items-list {
-    gap: 0.8rem;
+    gap: 0.8rem
 }
