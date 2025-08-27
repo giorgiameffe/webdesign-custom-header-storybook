@@ -37,10 +37,37 @@ type Story = StoryObj<typeof meta>;
 // Story di default del NavLinksList
 export const Default: Story = {
     args: {
+        ariaLabel: "Main Navigation",
         navItems: [
             {
                 label: "Home",                                        // Primo link della lista
-                onClick: () => console.log("Home clicked")
+                onClick: () => console.log("Home clicked"),
+                selected: true
+            },
+            {
+                label: "Shop",                                        // Secondo link della lista
+                onClick: () => console.log("Shop clicked")
+            },
+            {
+                label: "About Us",                                    // Terzo link della lista
+                onClick: () => console.log("About Us clicked")
+            },
+            {
+                label: "Contact Us",                                  // Quarto link della lista
+                onClick: () => console.log("Contact Us clicked")
+            }
+        ]
+    },
+};
+
+// Story di default del NavLinksList
+export const Selected: Story = {
+    args: {
+        navItems: [
+            {
+                label: "Home",                                        // Primo link della lista
+                onClick: () => console.log("Home clicked"),
+                selected: true
             },
             {
                 label: "Shop",                                        // Secondo link della lista
