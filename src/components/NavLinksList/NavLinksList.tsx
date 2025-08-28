@@ -4,8 +4,6 @@ import { NavLink } from "../NavLink/NavLink";
 // Importazione il tipo delle props del componente NavLink
 import type { NavLinkProps } from "../NavLink/NavLink";
 
-import { useState } from "react";
-
 // Importazione NavLinksList css
 import "./NavLinksList.css"
 
@@ -13,25 +11,13 @@ import "./NavLinksList.css"
 export type NavLinksListProps = {
     // Array di oggetti NavLinkProps, ogni oggetto rappresenta un link
     navItems: NavLinkProps[];
-    ariaLabel: string;
+    ariaLabel: string;        // descrizione ARIA del <nav>
+    activeLabel: string | null; // link attivo (o null se nessuno)
+    onToggle: (label: string) => void; // callback al click su un link
 }
 
 // Componente NavLinksList: rende una lista di link di navigazione
-export const NavLinksList = ({ navItems, ariaLabel }: NavLinksListProps) => {
-
-    // Stato locale per tracciare quale link è selezionato
-    // Inizializza con il label del primo navItem che ha `selected: true`
-    // Se nessun navItem è selezionato, lo stato iniziale sarà null
-    const [activeLabel, setActiveLabel] = useState<string | null>(
-        navItems.find(navItem => navItem.selected)?.label || null
-    );
-
-    // Funzione per togglare la selezione di un link
-    // Se il link cliccato è già selezionato, deseleziona (imposta null)
-    // Altrimenti, seleziona il link cliccato
-    const toggleLabel = (label: string) => {
-        setActiveLabel(prev => (prev === label ? null : label));
-    };
+export const NavLinksList = ({ navItems, ariaLabel, activeLabel, onToggle }: NavLinksListProps) => {
 
     // Mappa la lista dei navItems per aggiornare lo stato di selezione
     // e preservare l'onClick originale di ogni item
@@ -39,7 +25,7 @@ export const NavLinksList = ({ navItems, ariaLabel }: NavLinksListProps) => {
         ...item,                                // copia tutte le proprietà originali del navItem
         selected: item.label === activeLabel,   // imposta selected se il label corrisponde allo stato attivo
         onClick: () => {
-            toggleLabel(item.label);            // aggiorna lo stato quando il link viene cliccato
+            onToggle(item.label);            // aggiorna lo stato quando il link viene cliccato
             item.onClick?.();                   // chiama la funzione onClick originale se esiste
         },
     }));

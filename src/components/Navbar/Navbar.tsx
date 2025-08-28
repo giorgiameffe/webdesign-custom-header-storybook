@@ -7,6 +7,8 @@ import { NavLinksList } from "../NavLinksList/NavLinksList";
 // Importa il tipo delle props di NavLinksList
 import type { NavLinksListProps } from "../NavLinksList/NavLinksList";
 
+import { useState } from "react";
+
 import "./Navbar.css";
 
 // Definizione delle props del componente Navbar
@@ -22,6 +24,19 @@ export type NavbarProps = {
 // Componente Navbar: combina Logo e NavLinksList in un header
 export const Navbar = ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) => {
 
+    // Stato locale per tracciare quale link è selezionato
+    // Viene inizializzato con `null` → significa che all’inizio nessun link è attivo
+    const [activeLabel, setActiveLabel] = useState<string | null>(null);
+
+    // Funzione per gestire il click/toggle su un link
+    // Riceve il `label` del link cliccato
+    const handleToggle = (label: string) => {
+        // Se il link cliccato è già quello attivo → lo deseleziona (torna a null)
+        // Altrimenti → aggiorna lo stato mettendo come attivo quel nuovo link
+        setActiveLabel(prev => (prev === label ? null : label));
+    };
+
+
     return (
 
         // Elemento <header> semantico per la barra di navigazione
@@ -30,6 +45,8 @@ export const Navbar = ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) =
                 <NavLinksList
                     navItems={navItemsLeft}
                     ariaLabel="Shop Menu"
+                    activeLabel={activeLabel}
+                    onToggle={handleToggle}
                 />
             </div>
 
@@ -41,6 +58,8 @@ export const Navbar = ({ logoText, navItemsLeft, navItemsRight }: NavbarProps) =
                 <NavLinksList
                     navItems={navItemsRight}
                     ariaLabel="User Menu"
+                    activeLabel={activeLabel}
+                    onToggle={handleToggle}
                 />
             </div>
         </header>
