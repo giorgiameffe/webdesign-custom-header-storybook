@@ -2,6 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-gray-0);
+    background-color: light-dark(var(--color-gray-0), var(--color-green-10));
     padding: 1.5rem 2rem;
 }
