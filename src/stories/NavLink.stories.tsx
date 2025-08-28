@@ -4,6 +4,12 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 // Importa il componente NavLink
 import { NavLink } from "../components/NavLink/NavLink";
 
+import { Icon } from "../components/Icon/Icon";
+
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+
+
+
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof NavLink> = {
 
@@ -55,7 +61,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         label: "Home",  // Valore di default della prop label
-        selected: false
+        selected: false,
+        ariaLabel: "Home"
     },
 };
 
@@ -64,23 +71,27 @@ export const Default: Story = {
 export const Selected: Story = {
     args: {
         label: "Home",  // Valore di default della prop label
-        selected: true // Stato Selected
+        selected: true, // Stato Selected
+        ariaLabel: "Home"
     },
 };
 
 // Story del NavLink con l'icona (testo + icona)
 export const WithIcon: Story = {
+
     args: {
-        label: "Home",
-        icon: "icona",
-        selected: false
+        label: "User",
+        selected: false,
+        ariaLabel: "Profilo Utente",
+        icon: <Icon icon={faUser} />
     },
 };
 
 // Story del NavLink solo con l'icona
 export const IconOnly: Story = {
+
     args: {
-        icon: "icona",
+        icon: <Icon icon={faUser} size="1.5rem" />,
         ariaLabel: "Profilo utente",
         selected: false
     },
