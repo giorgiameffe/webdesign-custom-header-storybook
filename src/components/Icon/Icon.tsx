@@ -6,14 +6,16 @@ import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 export type IconProps = {
     icon: IconProp;       // icona da FontAwesome
     ariaLabel?: string;   // per accessibilità
+    size?: string
 }
 
 // Componente Icon che mostra un'icona 
-export const Icon = ({ icon, ariaLabel }: IconProps) => {
+export const Icon = ({ icon, ariaLabel, size }: IconProps) => {
     return (
         <FontAwesomeIcon
             icon={icon}
             aria-label={ariaLabel}
+            style={size ? { fontSize: size } : undefined}
         />
     );
 }
