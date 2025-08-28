@@ -23,6 +23,10 @@ const meta: Meta<typeof Icon> = {
         ariaLabel: {
             control: "text",
             description: "Etichetta ARIA opzionale per descrivere l'icona."
+        },
+        size: {
+            control: "text",
+            description: "Imposta la dimensione dell'icona (valore CSS valido, es. '24px', '1.5rem')"
         }
     }
 };
@@ -49,7 +53,8 @@ export const WishlistIcon: Story = {
 
     args: {
         icon: faHeart,
-        ariaLabel: "Icona Wishlist"
+        ariaLabel: "Icona Wishlist",
+        size: "1.5rem"
     }
 };
 
@@ -57,7 +62,8 @@ export const WishlistIcon: Story = {
 export const ShoppingBagIcon: Story = {
     args: {
         icon: faShoppingBag,
-        ariaLabel: "Icona Carrello"
+        ariaLabel: "Icona Carrello",
+        size: "1.5rem"
     }
 };
 
@@ -65,6 +71,7 @@ export const ShoppingBagIcon: Story = {
 export const UserIcon: Story = {
     args: {
         icon: faUser,
-        ariaLabel: "Icona User"
+        ariaLabel: "Icona User",
+        size: "1.5rem"
     }
 };
