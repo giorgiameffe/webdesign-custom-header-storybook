@@ -67,3 +67,21 @@ export const Selected: Story = {
         selected: true // Stato Selected
     },
 };
+
+// Story del NavLink con l'icona (testo + icona)
+export const WithIcon: Story = {
+    args: {
+        label: "Home",
+        icon: "icona",
+        selected: false
+    },
+};
+
+// Story del NavLink solo con l'icona
+export const IconOnly: Story = {
+    args: {
+        icon: "icona",
+        ariaLabel: "Profilo utente",
+        selected: false
+    },
+};
