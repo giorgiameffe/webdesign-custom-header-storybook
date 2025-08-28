@@ -6,7 +6,7 @@ import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 export type IconProps = {
     icon: IconProp;       // icona da FontAwesome
     ariaLabel?: string;   // per accessibilità
-    size?: string
+    size?: string;
 }
 
 // Componente Icon che mostra un'icona 
