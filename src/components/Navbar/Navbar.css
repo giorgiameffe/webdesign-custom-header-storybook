@@ -61,8 +61,8 @@
     cursor: pointer;
 }
 
-.mobile-nav span {
-    font-size: var(--font-size-h6);
+.close-menu svg {
+    color: white;
 }
 
 /* ===== Responsive ===== */
