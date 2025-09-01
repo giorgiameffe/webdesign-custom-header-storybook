@@ -4,5 +4,24 @@
     margin: 0;
     display: flex;
     color: var(--color-green-10);
+    gap: 0.8rem;
+}
+
+/* Solo nell'overlay: lista di link in colonna */
+.mobile-menu-overlay .nav-links-list,
+.mobile-menu-overlay nav ul {
+    flex-direction: column;
     gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:480px) {
+    .nav-items-list {
+        gap: 0.2rem;
+        font-size: 1.5rem;
+    }
 }

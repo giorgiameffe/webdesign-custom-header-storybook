@@ -2,35 +2,34 @@
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 2rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     border: none;
     background-color: transparent;
-    color: var(--color-gray-13);
+    color: light-dark(var(--color-gray-15), var(--color-gray-2));
     border-bottom: 2px solid transparent;
     transition: color 0.4s ease, border 0.4s ease-in;
 }
 
 /* Hover */
 .nav-item:hover {
-    color: var(--color-green-8);
-    border-bottom-color: var(--color-green-8);
+    color: light-dark(var(--color-green-8), var(--color-green-3));
+    border-bottom-color: light-dark(var(--color-green-8), var(--color-green-3));
 }
 
 /* Selezionato */
 .nav-item-selected {
-    color: var(--color-green-10);
+    color: light-dark(var(--color-green-10), var(--color-green-6));
     font-weight: 600;
-    border-bottom-color: var(--color-green-10);
+    border-bottom-color: light-dark(var(--color-green-10), var(--color-green-6));
 }
 
 /* Evita cambiamenti a hover sul selezionato */
 .nav-item-selected:hover {
-    color: var(--color-green-10);
-    border-bottom-color: var(--color-green-10);
+    color: light-dark(var(--color-green-10), var(--color-green-6));
+    border-bottom-color: light-dark(var(--color-green-10), var(--color-green-6));
 }
 
 /* Focus da tastiera */
@@ -39,9 +38,9 @@
     /* rimuove l’outline di default */
     box-shadow: 0 0 12px 4px rgba(32, 173, 91, 0.2);
     /* alone verde chiaro e sfumato */
-    border: 1px solid var(--color-gray-10);
+    border: light-dark(var(--color-gray-10), var(--color-gray-5));
     /* bordo molto chiaro */
-    color: var(--color-gray-13);
+    color: light-dark(var(--color-gray-13), var(--color-green-3));
     border-radius: 4px;
     transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
 }
@@ -52,13 +51,12 @@
     /* alone leggero per selezionato */
     border: 1px solid rgba(220, 252, 231, 0.15);
     /* bordo chiaro */
-    color: var(--color-green-13);
+    color: light-dark((var(--color-green-13), var(--color-green-6)));
     border-radius: 4px;
     transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
 }
 
-/* Lista dei link */
-
-.nav-items-list {
-    gap: 0.8rem
+.mobile-menu-overlay .nav-item {
+    width: 100%;
+    justify-content: center;
 }
