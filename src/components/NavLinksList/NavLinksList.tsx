@@ -14,6 +14,7 @@ export type NavLinksListProps = {
     ariaLabel: string;        // descrizione ARIA del <nav>
     activeLabel: string | null; // link attivo (o null se nessuno)
     onToggle: (label: string) => void; // callback al click su un link
+    hideTextOnMobile?: boolean;
 }
 
 // Componente NavLinksList: rende una lista di link di navigazione
