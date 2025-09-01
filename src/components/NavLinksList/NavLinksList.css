@@ -1,27 +1,27 @@
 .nav-items-list {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: var(--spacing-zero);
+    margin: var(--spacing-zero);
     display: flex;
     color: var(--color-green-10);
-    gap: 0.8rem;
+    gap: var(--spacing-sm);
 }
 
 /* Solo nell'overlay: lista di link in colonna */
 .mobile-menu-overlay .nav-links-list,
 .mobile-menu-overlay nav ul {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: var(--spacing-zero);
+    margin: var(--spacing-zero);
     width: 100%;
     text-align: center;
 }
 
 @media (max-width:480px) {
     .nav-items-list {
-        gap: 0.2rem;
-        font-size: 1.5rem;
+        gap: var(--spacing-xs);
+        font-size: var(--spacing-lg);
     }
 }
