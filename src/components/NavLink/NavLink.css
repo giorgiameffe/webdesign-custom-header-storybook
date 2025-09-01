@@ -1,4 +1,4 @@
-/* Stile base */
+/* Stile base dei link */
 .nav-item {
     display: flex;
     align-items: center;
@@ -13,20 +13,20 @@
     transition: color 0.4s ease, border 0.4s ease-in;
 }
 
-/* Hover */
+/* Stato hover */
 .nav-item:hover {
     color: light-dark(var(--color-green-8), var(--color-green-3));
     border-bottom-color: light-dark(var(--color-green-8), var(--color-green-3));
 }
 
-/* Selezionato */
+/* Stato selezionato */
 .nav-item-selected {
     color: light-dark(var(--color-green-10), var(--color-green-6));
     font-weight: 600;
     border-bottom-color: light-dark(var(--color-green-10), var(--color-green-6));
 }
 
-/* Evita cambiamenti a hover sul selezionato */
+/* Mantieni colori selezionato anche a hover */
 .nav-item-selected:hover {
     color: light-dark(var(--color-green-10), var(--color-green-6));
     border-bottom-color: light-dark(var(--color-green-10), var(--color-green-6));
@@ -51,12 +51,11 @@
     transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
 }
 
+/* Overlay mobile */
 .mobile-menu-overlay .nav-item {
     width: 100%;
     justify-content: center;
 }
-
-/* Overlay */
 
 .mobile-nav span {
     font-size: var(--font-size-h6);
@@ -67,6 +66,7 @@
     color: var(--color-green-7);
 }
 
+/* Overlay: stato selezionato */
 .mobile-menu-overlay .nav-item-selected,
 .mobile-menu-overlay .nav-item-selected span {
     color: light-dark(var(--color-green-10), var(--color-green-6));

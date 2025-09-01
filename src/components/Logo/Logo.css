@@ -1,3 +1,4 @@
+/* Stile principale del logo */
 #logo {
     color: light-dark(var(--color-green-10), var(--color-gray-0));
     font-size: var(--font-size-h4);
@@ -9,20 +10,19 @@
     cursor: pointer;
 }
 
+/* Margine sinistro per elementi interni (es. icona) */
 #logo div {
     margin-left: var(--spacing-xs);
 }
 
-
+/* Responsive: schermi piccoli */
 @media (max-width: 480px) {
-
     #logo {
         font-size: var(--font-size-h5);
     }
 }
 
 @media (max-width: 320px) {
-
     #logo {
         font-size: var(--font-size-h6);
         margin-left: var(--spacing-zero);

@@ -1,3 +1,4 @@
+/* Lista dei link principale */
 .nav-items-list {
     list-style-type: none;
     padding: var(--spacing-zero);
@@ -7,7 +8,7 @@
     gap: var(--spacing-sm);
 }
 
-/* Solo nell'overlay: lista di link in colonna */
+/* Lista link overlay mobile */
 .mobile-menu-overlay .nav-links-list,
 .mobile-menu-overlay nav ul {
     flex-direction: column;
@@ -17,10 +18,11 @@
     margin: var(--spacing-zero);
     width: 100%;
     text-align: center;
-    margin-top: var(--spacing-xl)
+    margin-top: var(--spacing-xl);
 }
 
-@media (max-width:480px) {
+/* Responsive piccoli dispositivi */
+@media (max-width: 480px) {
     .nav-items-list {
         gap: var(--spacing-xs);
         font-size: var(--spacing-lg);

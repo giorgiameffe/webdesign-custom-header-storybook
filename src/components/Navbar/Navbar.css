@@ -1,3 +1,4 @@
+/* Contenitore principale della navbar */
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -7,6 +8,7 @@
     position: relative;
 }
 
+/* Colonne della navbar */
 .navbar-left,
 .navbar-center,
 .navbar-right {
@@ -14,12 +16,13 @@
     align-items: center;
 }
 
+/* Lista link desktop lato sinistro */
 .desktop-nav-items {
     display: flex;
     gap: var(--spacing-lg);
 }
 
-/* Hamburger button */
+/* Bottone hamburger */
 .hamburger-menu {
     display: none;
     background: none;
@@ -48,6 +51,7 @@
     z-index: 1;
 }
 
+/* Bottone chiudi overlay */
 .close-menu {
     position: absolute;
     top: var(--spacing-zero);
@@ -65,9 +69,8 @@
     color: white;
 }
 
-/* ===== Responsive ===== */
+/* Responsive: tablet e laptop */
 @media (max-width: 1024px) {
-
     .navbar-right .nav-item span:first-child {
         display: none;
     }
@@ -77,8 +80,8 @@
     }
 }
 
+/* Responsive: tablet medio/small */
 @media (max-width: 768px) {
-
     .navbar-container {
         padding: var(--spacing-sm) var(--spacing-sm);
     }
@@ -92,7 +95,7 @@
         display: none;
     }
 
-    /* Nasconde il logo centrale e lo sposta a sinistra vicino all'hamburger */
+    /* Sposta il logo centrale vicino all’hamburger */
     .navbar-center {
         position: absolute;
         left: 5rem;
@@ -113,9 +116,8 @@
     }
 }
 
-/* Small mobile: riduce lo spazio tra le icone a destra */
+/* Responsive: piccoli dispositivi mobili */
 @media (max-width: 480px) {
-
     .navbar-container {
         padding: var(--spacing-sm) var(--spacing-sm);
     }
@@ -132,7 +134,7 @@
         padding: 0.25rem;
     }
 
-    /* Opzionale: riduce dimensione icone se necessario */
+    /* Riduce dimensione icone se necessario */
     .navbar-right .nav-item .nav-icon svg {
         font-size: 1rem;
     }
