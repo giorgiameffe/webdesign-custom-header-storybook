@@ -2,13 +2,13 @@
 .nav-item {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-md);
     font-weight: 500;
     cursor: pointer;
     border: none;
     background-color: transparent;
-    color: light-dark(var(--color-gray-15), var(--color-gray-2));
+    color: light-dark(var(--color-gray-15), var(--color-gray-0));
     border-bottom: 2px solid transparent;
     transition: color 0.4s ease, border 0.4s ease-in;
 }
@@ -35,11 +35,8 @@
 /* Focus da tastiera */
 .nav-item:focus-visible {
     outline: none;
-    /* rimuove l’outline di default */
     box-shadow: 0 0 12px 4px rgba(32, 173, 91, 0.2);
-    /* alone verde chiaro e sfumato */
     border: light-dark(var(--color-gray-10), var(--color-gray-5));
-    /* bordo molto chiaro */
     color: light-dark(var(--color-gray-13), var(--color-green-3));
     border-radius: 4px;
     transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
@@ -48,9 +45,7 @@
 .nav-item-selected:focus-visible {
     outline: none;
     box-shadow: 0 0 14px 4px rgba(220, 252, 231, 0.25);
-    /* alone leggero per selezionato */
     border: 1px solid rgba(220, 252, 231, 0.15);
-    /* bordo chiaro */
     color: light-dark((var(--color-green-13), var(--color-green-6)));
     border-radius: 4px;
     transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
