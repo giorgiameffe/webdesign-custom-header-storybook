@@ -17,6 +17,7 @@
     margin: var(--spacing-zero);
     width: 100%;
     text-align: center;
+    margin-top: var(--spacing-xl)
 }
 
 @media (max-width:480px) {
