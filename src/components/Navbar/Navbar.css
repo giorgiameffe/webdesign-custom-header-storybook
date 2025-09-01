@@ -116,6 +116,10 @@
 /* Small mobile: riduce lo spazio tra le icone a destra */
 @media (max-width: 480px) {
 
+    .navbar-container {
+        padding: var(--spacing-sm) var(--spacing-sm);
+    }
+
     .navbar-right {
         gap: var(--spacing-xs);
     }
