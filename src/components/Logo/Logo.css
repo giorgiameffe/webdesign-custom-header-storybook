@@ -10,14 +10,7 @@
 }
 
 #logo div {
-    margin-left: 0.5rem;
-}
-
-@media (max-width: 768px) {
-
-    #logo {
-        font-size: var(--font-size-h4);
-    }
+    margin-left: var(--spacing-xs);
 }
 
 
@@ -32,6 +25,6 @@
 
     #logo {
         font-size: var(--font-size-h6);
-        margin-left: 0;
+        margin-left: var(--spacing-zero);
     }
 }
