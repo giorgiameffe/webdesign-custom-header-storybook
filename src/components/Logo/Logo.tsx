@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLeaf } from "@fortawesome/free-solid-svg-icons";
+
 import "./Logo.css";
 
 // Definisce il tipo delle props che il componente Logo si aspetta
@@ -10,6 +13,9 @@ export type LogoProps = {
 export const Logo = ({ text }: LogoProps) => {
     // Ritorna un elemento <div> contenente il testo del logo
     return (
-        <div id="logo-text">{text}</div>
+        <button id="logo">
+            <FontAwesomeIcon icon={faLeaf} />
+            <div>{text}</div>
+        </button>
     )
 }

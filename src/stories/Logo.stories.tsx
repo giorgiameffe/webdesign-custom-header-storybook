@@ -36,7 +36,7 @@ type Story = StoryObj<typeof meta>;
 // Story di default del componente Logo
 export const Default: Story = {
 
-    args: { text: "My Brand" }, // Valore di default della prop 'text'
+    args: { text: "EcoÉclat" }, // Valore di default della prop 'text'
 
     render: ({ text }) => ( // Funzione che renderizza il componente con le props correnti
 

@@ -52,7 +52,7 @@ type Story = StoryObj<typeof meta>;
 // Story interattiva con toggle dei link selezionati
 export const InteractiveNavbar: Story = {
     args: {
-        logoText: "My Brand",
+        logoText: "EcoÉclat",
         navItemsLeft: [
             {
                 label: "Viso",
