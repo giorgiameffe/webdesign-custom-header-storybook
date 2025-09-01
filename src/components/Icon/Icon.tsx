@@ -2,6 +2,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
+import "./Icon.css"
+
 // Definisce il tipo delle props che il componente Icon si aspetta
 export type IconProps = {
     icon: IconProp;       // icona da FontAwesome

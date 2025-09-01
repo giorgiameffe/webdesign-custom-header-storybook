@@ -31,11 +31,6 @@
     z-index: 1;
 }
 
-.hamburger-menu svg {
-    font-size: var(--font-size-h5);
-    color: light-dark(var(--color-gray-15), var(--color-gray-0));
-}
-
 /* Overlay menu mobile */
 .mobile-menu-overlay {
     display: flex;
