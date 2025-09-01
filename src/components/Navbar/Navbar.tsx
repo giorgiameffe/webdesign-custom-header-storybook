@@ -17,11 +17,13 @@ export const Navbar = ({
     navItemsLeft,
     navItemsRight,
 }: NavbarProps) => {
+
     const [activeLabel, setActiveLabel] = useState<string | null>(null);
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleToggle = (label: string) => {
         setActiveLabel((prev) => (prev === label ? null : label));
+        setMenuOpen(false);
     };
 
     return (
