@@ -2,6 +2,137 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: light-dark(var(--color-gray-0), var(--color-green-10));
-    padding: 1.5rem 2rem;
+    background-color: light-dark(var(--color-green-0), var(--color-green-15));
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Hamburger button */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger-menu svg {
+    font-size: 1.5rem;
+    color: black;
+}
+
+/* Overlay menu mobile */
+.mobile-menu-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    z-index: 1;
+}
+
+.close-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background: transparent;
+    border: none;
+    color: aliceblue;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+
+    .navbar-right .nav-item span:first-child {
+        display: none;
+    }
+
+    .navbar-right .nav-item {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Mostra hamburger e nasconde menu desktop */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .desktop-nav-links {
+        display: none;
+    }
+
+    /* Nasconde il logo centrale e lo sposta a sinistra vicino all'hamburger */
+    .navbar-center {
+        position: absolute;
+        left: 5rem;
+        bottom: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .navbar-left {
+        flex: unset;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .navbar-right .nav-item span:nth-child(2) {
+        display: none;
+    }
+}
+
+/* Small mobile: riduce lo spazio tra le icone a destra */
+@media (max-width: 480px) {
+
+    .navbar-right {
+        gap: 0.25rem;
+        /* più compatto */
+    }
+
+    .navbar-right .nav-item span:first-child {
+        display: inline-block;
+    }
+
+    .navbar-right .nav-item {
+        padding: 0.25rem;
+        /* riduce padding interno */
+    }
+
+    /* Opzionale: riduce dimensione icone se necessario */
+    .navbar-right .nav-item .nav-icon svg {
+        font-size: 1rem;
+    }
+
+    .navbar-center {
+        left: 4rem;
+        vertical-align: middle;
+    }
 }
