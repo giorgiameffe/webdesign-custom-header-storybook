@@ -37,7 +37,7 @@ export const Navbar = ({
                 </button>
 
                 {/* Desktop menu */}
-                <div className="desktop-nav-links">
+                <div className="desktop-nav-items">
                     <NavLinksList
                         navItems={navItemsLeft}
                         ariaLabel="Menu principale"
