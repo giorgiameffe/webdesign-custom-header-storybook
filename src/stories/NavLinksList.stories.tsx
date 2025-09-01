@@ -40,19 +40,19 @@ export const Default: Story = {
         ariaLabel: "Main Navigation",
         navItems: [
             {
-                label: "Home",                                        // Primo link della lista
+                label: "Viso",                                        // Primo link della lista
                 onClick: () => console.log("Home clicked"),
             },
             {
-                label: "Shop",                                        // Secondo link della lista
+                label: "Corpo",                                        // Secondo link della lista
                 onClick: () => console.log("Shop clicked")
             },
             {
-                label: "About Us",                                    // Terzo link della lista
+                label: "Capelli",                                    // Terzo link della lista
                 onClick: () => console.log("About Us clicked")
             },
             {
-                label: "Cart",
+                label: "Carrello",
                 onClick: () => console.log("Cart clicked")
             },
             {
@@ -60,7 +60,7 @@ export const Default: Story = {
                 onClick: () => console.log("Wishlist clicked")
             },
             {
-                label: "User",
+                label: "Accedi",
                 onClick: () => console.log("User clicked")
             }
         ]
@@ -72,20 +72,20 @@ export const Selected: Story = {
     args: {
         navItems: [
             {
-                label: "Home",                                        // Primo link della lista
+                label: "Viso",                                        // Primo link della lista
                 onClick: () => console.log("Home clicked"),
                 selected: true
             },
             {
-                label: "Shop",                                        // Secondo link della lista
+                label: "Corpo",                                        // Secondo link della lista
                 onClick: () => console.log("Shop clicked")
             },
             {
-                label: "About Us",                                    // Terzo link della lista
+                label: "Capelli",                                    // Terzo link della lista
                 onClick: () => console.log("About Us clicked")
             },
             {
-                label: "Cart",
+                label: "Carrello",
                 onClick: () => console.log("Cart clicked")
             },
             {
@@ -93,7 +93,7 @@ export const Selected: Story = {
                 onClick: () => console.log("Wishlist clicked")
             },
             {
-                label: "User",
+                label: "Accedi",
                 onClick: () => console.log("User clicked")
             },
         ]

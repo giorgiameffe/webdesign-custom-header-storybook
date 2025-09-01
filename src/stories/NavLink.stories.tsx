@@ -60,9 +60,9 @@ type Story = StoryObj<typeof meta>;
 // Story di Default del NavLink
 export const Default: Story = {
     args: {
-        label: "Home",  // Valore di default della prop label
+        label: "Accedi",  // Valore di default della prop label
         selected: false,
-        ariaLabel: "Home"
+        ariaLabel: "Profilo Utente"
     },
 };
 
@@ -70,9 +70,9 @@ export const Default: Story = {
 // Story del NavLink Selected
 export const Selected: Story = {
     args: {
-        label: "Home",  // Valore di default della prop label
+        label: "Accedi",  // Valore di default della prop label
         selected: true, // Stato Selected
-        ariaLabel: "Home"
+        ariaLabel: "Profilo Utente"
     },
 };
 
@@ -80,7 +80,7 @@ export const Selected: Story = {
 export const WithIcon: Story = {
 
     args: {
-        label: "User",
+        label: "Accedi",
         selected: false,
         ariaLabel: "Profilo Utente",
         icon: <Icon icon={faUser} />

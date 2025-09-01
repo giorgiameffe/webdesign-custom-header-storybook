@@ -4,6 +4,10 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 // Importa il componente Navbar
 import { Navbar } from "../components/Navbar/Navbar";
 
+// Importa i componenti e le icone di Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
+
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Navbar> = {
 
@@ -51,30 +55,33 @@ export const InteractiveNavbar: Story = {
         logoText: "My Brand",
         navItemsLeft: [
             {
-                label: "Home",
-                onClick: () => console.log("Home clicked")
+                label: "Viso",
+                onClick: () => console.log("Voce menu Viso cliccata")
             },
             {
-                label: "Shop",
-                onClick: () => console.log("Shop clicked")
+                label: "Corpo",
+                onClick: () => console.log("Voce menu Corpo cliccata")
             },
             {
-                label: "About Us",
-                onClick: () => console.log("About Us clicked")
+                label: "Capelli",
+                onClick: () => console.log("Voce menu Capelli cliccata")
             },
         ],
         navItemsRight: [
             {
-                label: "Cart",
-                onClick: () => console.log("Cart clicked")
+                label: "Carrello",
+                onClick: () => console.log("Voce menu Carrello cliccata"),
+                icon: <FontAwesomeIcon icon={faShoppingCart} />
             },
             {
                 label: "Wishlist",
-                onClick: () => console.log("Wishlist clicked")
+                onClick: () => console.log("Voce menu Wishlist cliccata"),
+                icon: <FontAwesomeIcon icon={faHeart} />
             },
             {
-                label: "User",
-                onClick: () => console.log("User clicked")
+                label: "Accedi",
+                onClick: () => console.log("Voce menu Utente cliccata"),
+                icon: <FontAwesomeIcon icon={faUser} />
             },
         ],
     },
