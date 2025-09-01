@@ -1,12 +1,21 @@
-#logo-text {
-    color: light-dark(var(--color-green-7), var(--color-gray-2));
+#logo {
+    color: light-dark(var(--color-green-10), var(--color-gray-0));
     font-size: var(--font-size-h4);
     font-weight: bold;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#logo div {
+    margin-left: 0.5rem;
 }
 
 @media (max-width: 768px) {
 
-    #logo-text {
+    #logo {
         font-size: var(--font-size-h4);
     }
 }
@@ -14,7 +23,15 @@
 
 @media (max-width: 480px) {
 
-    #logo-text {
+    #logo {
         font-size: var(--font-size-h5);
+    }
+}
+
+@media (max-width: 320px) {
+
+    #logo {
+        font-size: var(--font-size-h6);
+        margin-left: 0;
     }
 }
