@@ -3,8 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: light-dark(var(--color-green-0), var(--color-green-11));
-    padding: var(--spacing-md) var(--spacing-sm);
+    background-color: light-dark(var(--color-green-0), var(--color-green-12));
+    padding: var(--spacing-lg) var(--spacing-md);
     position: relative;
 }
 
@@ -31,6 +31,16 @@
     z-index: 1;
 }
 
+.hamburger-menu svg {
+    font-size: var(--font-size-h5);
+    color: light-dark(var(--color-gray-15), var(--color-gray-0));
+}
+
+.hamburger-menu svg:hover {
+    color: light-dark(var(--color-purple-12), var(--color-purple-2));
+    transition: color 0.4s ease, border 0.4s ease-in;
+}
+
 /* Overlay menu mobile */
 .mobile-menu-overlay {
     display: flex;
@@ -51,17 +61,21 @@
     position: absolute;
     top: var(--spacing-zero);
     right: var(--spacing-zero);
-    margin-top: var(--spacing-md);
+    margin-top: var(--spacing-xl);
     margin-right: var(--spacing-md);
     background: transparent;
     border: none;
-    color: light-dark(var(--color-gray-15), var(--color-gray-0));
     font-size: var(--font-size-xl);
     cursor: pointer;
 }
 
 .close-menu svg {
-    color: white;
+    color: var(--color-gray-0);
+}
+
+.close-menu svg:hover {
+    color: light-dark(var(--color-purple-12), var(--color-purple-2));
+    transition: color 0.4s ease, border 0.4s ease-in;
 }
 
 /* Responsive: tablet e laptop */
@@ -78,7 +92,7 @@
 /* Responsive: tablet medio/small */
 @media (max-width: 768px) {
     .navbar-container {
-        padding: var(--spacing-sm) var(--spacing-sm);
+        padding: var(--spacing-md);
     }
 
     /* Mostra hamburger e nasconde menu desktop */
@@ -114,7 +128,7 @@
 /* Responsive: piccoli dispositivi mobili */
 @media (max-width: 480px) {
     .navbar-container {
-        padding: var(--spacing-sm) var(--spacing-sm);
+        padding: var(--spacing-md) var(--spacing-sm);
     }
 
     .navbar-right {
