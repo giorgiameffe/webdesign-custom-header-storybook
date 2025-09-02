@@ -15,40 +15,37 @@
 
 /* Stato hover */
 .nav-item:hover {
-    color: light-dark(var(--color-green-8), var(--color-green-3));
-    border-bottom-color: light-dark(var(--color-green-8), var(--color-green-3));
+    color: light-dark(var(--color-purple-12), var(--color-purple-2));
+    border-bottom-color: light-dark(var(--color-purple-12), var(--color-purple-2));
 }
 
 /* Stato selezionato */
 .nav-item-selected {
-    color: light-dark(var(--color-green-10), var(--color-green-6));
+    color: light-dark(var(--color-purple-12), var(--color-purple-4));
     font-weight: 600;
-    border-bottom-color: light-dark(var(--color-green-10), var(--color-green-6));
+    border-bottom-color: light-dark(var(--color-purple-12), var(--color-purple-4));
 }
 
 /* Mantieni colori selezionato anche a hover */
 .nav-item-selected:hover {
-    color: light-dark(var(--color-green-10), var(--color-green-6));
-    border-bottom-color: light-dark(var(--color-green-10), var(--color-green-6));
+    color: light-dark(var(--color-purple-12), var(--color-purple-4));
+    border-bottom-color: light-dark(var(--color-purple-12), var(--color-purple-4));
 }
 
 /* Focus da tastiera */
 .nav-item:focus-visible {
     outline: none;
-    box-shadow: 0 0 12px 4px rgba(32, 173, 91, 0.2);
+    box-shadow: 0 0 12px 4px rgba(65, 2, 97, 0.2);
     border: light-dark(var(--color-gray-10), var(--color-gray-5));
-    color: light-dark(var(--color-gray-13), var(--color-green-3));
+    color: var(--color-gray-13);
     border-radius: 4px;
     transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+    background-color: var(--color-green-0);
 }
 
 .nav-item-selected:focus-visible {
-    outline: none;
-    box-shadow: 0 0 14px 4px rgba(220, 252, 231, 0.25);
-    border: 1px solid rgba(220, 252, 231, 0.15);
-    color: light-dark((var(--color-green-13), var(--color-green-6)));
-    border-radius: 4px;
-    transition: color 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+    color: var(--color-purple-12);
+    border-bottom-color: light-dark(var(--color-purple-12), var(--color-purple-4));
 }
 
 /* Overlay mobile */
@@ -63,13 +60,14 @@
 }
 
 .mobile-nav span:hover {
-    color: var(--color-green-7);
+    color: var(--color-purple-2);
 }
 
 /* Overlay: stato selezionato */
 .mobile-menu-overlay .nav-item-selected,
 .mobile-menu-overlay .nav-item-selected span {
-    color: light-dark(var(--color-green-10), var(--color-green-6));
+    color: var(--color-purple-4);
     font-weight: 600;
-    border-bottom-color: light-dark(var(--color-green-10), var(--color-green-6));
+    border-bottom-color: var(--color-purple-4);
+    ;
 }
