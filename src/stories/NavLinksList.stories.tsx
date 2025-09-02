@@ -70,11 +70,11 @@ export const Default: Story = {
 // Story del NavLinksList Selected
 export const Selected: Story = {
     args: {
+        activeLabel: "Viso",
         navItems: [
             {
                 label: "Viso",                                        // Primo link della lista
                 onClick: () => console.log("Home clicked"),
-                selected: true
             },
             {
                 label: "Corpo",                                        // Secondo link della lista
