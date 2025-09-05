@@ -1,107 +1,48 @@
-// Import del logo centrale
-import { Logo } from "../Logo/Logo";
+// Import del componente atomico NavLink
+import { NavLink } from "../NavLink/NavLink";
 
-// Import della lista di link (NavLinksList) e relativo tipo props
-import { NavLinksList } from "../NavLinksList/NavLinksList";
-import type { NavLinksListProps } from "../NavLinksList/NavLinksList";
+// Import del tipo delle props di NavLink
+import type { NavLinkProps } from "../NavLink/NavLink";
 
-// Import delle icone di FontAwesome per hamburger e chiudi menu
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+// Import del CSS specifico per la lista dei link
+import "./Navbar.css"
 
-// Import di useState per gestire stato locale
-import { useState } from "react";
-
-// Import del CSS del Navbar
-import "./Navbar.css";
-
-// Tipizzazione delle props del componente Navbar
+// Tipizzazione delle props di NavLinksList
 export type NavbarProps = {
-    logoText: string;                             // Testo da mostrare al centro nel logo
-    navItemsLeft: NavLinksListProps["navItems"];  // Array dei link della parte sinistra
-    navItemsRight: NavLinksListProps["navItems"]; // Array dei link della parte destra
-};
+    navItems: NavLinkProps[];              // Array di oggetti NavLinkProps, ogni oggetto rappresenta un link
+    ariaLabel: string;                     // Etichetta ARIA descrittiva per il <nav>
+    activeLabel: string | null;            // Link attivo (o null se nessuno)
+    onToggle: (label: string) => void;     // Callback da eseguire al click su un link
+    hideTextOnMobile?: boolean;            // Nasconde testo dei link su dispositivi mobili
+}
 
-// Componente Navbar
-export const Navbar = ({
-    logoText,
-    navItemsLeft,
-    navItemsRight,
-}: NavbarProps) => {
+// Componente NavLinksList: rende una lista di link di navigazione
+export const Navbar = ({ navItems, ariaLabel, activeLabel, onToggle }: NavbarProps) => {
 
-    // Stato del link attivo (label) e del menu mobile aperto/chiuso
-    const [activeLabel, setActiveLabel] = useState<string | null>(null);
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    // Funzione chiamata al click su un link: aggiorna activeLabel e chiude overlay
-    const handleToggle = (label: string) => {
-        setActiveLabel((prev) => (prev === label ? null : label)); // Toggle selezione
-        setMenuOpen(false); // Chiude overlay mobile se aperto
-    };
+    // Mappa la lista dei navItems per aggiornare lo stato di selezione
+    // e preservare l'onClick originale di ogni item
+    const updatedItems = navItems.map(item => ({
+        ...item,                                    // Copia tutte le proprietà originali del navItem
+        selected: item.label === activeLabel,       // Imposta selected se il label corrisponde allo stato attivo
+        onClick: () => {
+            onToggle(item.label);                   // Aggiorna lo stato attivo quando il link viene cliccato
+            item.onClick?.();                       // Chiama la funzione onClick originale se esiste
+        },
+    }));
 
     return (
-        <header className="navbar-container">
-            {/* Colonna sinistra */}
-            <div className="navbar-left">
-                {/* Bottone hamburger per aprire/chiudere overlay mobile */}
-                <button
-                    className="hamburger-menu"
-                    aria-label={menuOpen ? "Chiudi menu" : "Apri menu"}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    <FontAwesomeIcon icon={faBars} />
-                </button>
-
-                {/* Menu desktop lato sinistro */}
-                <div className="desktop-nav-items">
-                    <NavLinksList
-                        navItems={navItemsLeft}       // Array link
-                        ariaLabel="Menu principale"   // Etichetta ARIA per accessibilità
-                        activeLabel={activeLabel}     // Stato link selezionato
-                        onToggle={handleToggle}       // Funzione di callback al click
-                    />
-                </div>
-            </div>
-
-            {/* Colonna centrale: logo */}
-            <div className="navbar-center">
-                <Logo text={logoText} />
-            </div>
-
-            {/* Colonna destra: menu utente */}
-            <div className="navbar-right">
-                <NavLinksList
-                    navItems={navItemsRight}         // Array link lato destro
-                    ariaLabel="Menu utente"          // Etichetta ARIA
-                    activeLabel={activeLabel}        // Stato link selezionato
-                    onToggle={handleToggle}          // Callback click
-                    hideTextOnMobile={true}          // Nasconde testo su mobile (solo icone)
-                />
-            </div>
-
-            {/* Overlay mobile */}
-            {menuOpen && (
-                <div className="mobile-menu-overlay">
-                    {/* Bottone chiudi overlay */}
-                    <button
-                        className="close-menu"
-                        onClick={() => setMenuOpen(false)}
-                        aria-label="Chiudi menu"
-                    >
-                        <FontAwesomeIcon icon={faTimes} className="x-icon" />
-                    </button>
-
-                    {/* Lista link mobile */}
-                    <nav className="mobile-nav">
-                        <NavLinksList
-                            navItems={navItemsLeft}     // Array link lato sinistro
-                            ariaLabel="Menu mobile"     // Etichetta ARIA
-                            activeLabel={activeLabel}   // Stato link selezionato
-                            onToggle={handleToggle}     // Callback click chiude overlay
-                        />
-                    </nav>
-                </div>
-            )}
-        </header>
-    );
-};
+        // Elemento <nav> semantico per la navigazione
+        <nav aria-label={ariaLabel}>
+            {/* Lista non ordinata dei link */}
+            <ul className="nav-items-list">
+                {/* Mappa ogni link dell'array in un <li> contenente un NavLink */}
+                {updatedItems.map((navItem, index) =>
+                    <li key={index} >
+                        {/* Spread delle props del singolo link su NavLink */}
+                        <NavLink {...navItem} />
+                    </li>
+                )}
+            </ul>
+        </nav>
+    )
+}

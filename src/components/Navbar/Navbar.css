@@ -1,155 +1,30 @@
-/* Contenitore principale della navbar */
-.navbar-container {
+/* Lista dei link principale */
+.nav-items-list {
+    list-style-type: none;
+    padding: var(--spacing-zero);
+    margin: var(--spacing-zero);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: light-dark(var(--color-green-0), var(--color-green-12));
-    padding: var(--spacing-lg) var(--spacing-md);
-    position: relative;
+    color: var(--color-green-10);
+    gap: var(--spacing-sm);
 }
 
-/* Colonne della navbar */
-.navbar-left,
-.navbar-center,
-.navbar-right {
-    display: flex;
-    align-items: center;
-}
-
-/* Lista link desktop lato sinistro */
-.desktop-nav-items {
-    display: flex;
-    gap: var(--spacing-lg);
-}
-
-/* Bottone hamburger */
-.hamburger-menu {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.hamburger-menu svg {
-    font-size: var(--font-size-h5);
-    color: light-dark(var(--color-gray-15), var(--color-gray-0));
-}
-
-.hamburger-menu svg:hover {
-    color: light-dark(var(--color-purple-12), var(--color-purple-2));
-    transition: color 0.4s ease, border 0.4s ease-in;
-}
-
-/* Overlay menu mobile */
-.mobile-menu-overlay {
-    display: flex;
+/* Lista link overlay mobile */
+.mobile-menu-overlay .nav-links-list,
+.mobile-menu-overlay nav ul {
     flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: var(--spacing-zero);
-    left: var(--spacing-zero);
+    gap: var(--spacing-xl);
+    list-style: none;
+    padding: var(--spacing-zero);
+    margin: var(--spacing-zero);
     width: 100%;
-    height: 100%;
-    padding-top: var(--spacing-xl);
-    z-index: 1;
-}
-
-/* Bottone chiudi overlay */
-.close-menu {
-    position: absolute;
-    top: var(--spacing-zero);
-    right: var(--spacing-zero);
+    text-align: center;
     margin-top: var(--spacing-xl);
-    margin-right: var(--spacing-md);
-    background: transparent;
-    border: none;
-    font-size: var(--font-size-xl);
-    cursor: pointer;
 }
 
-.close-menu svg {
-    color: var(--color-gray-0);
-}
-
-.close-menu svg:hover {
-    color: light-dark(var(--color-purple-12), var(--color-purple-2));
-    transition: color 0.4s ease, border 0.4s ease-in;
-}
-
-/* Responsive: tablet e laptop */
-@media (max-width: 1024px) {
-    .navbar-right .nav-item span:first-child {
-        display: none;
-    }
-
-    .navbar-right .nav-item {
-        display: inline-block;
-    }
-}
-
-/* Responsive: tablet medio/small */
-@media (max-width: 768px) {
-    .navbar-container {
-        padding: var(--spacing-md);
-    }
-
-    /* Mostra hamburger e nasconde menu desktop */
-    .hamburger-menu {
-        display: block;
-    }
-
-    .desktop-nav-items {
-        display: none;
-    }
-
-    /* Sposta il logo centrale vicino all’hamburger */
-    .navbar-center {
-        position: absolute;
-        left: 5rem;
-        bottom: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .navbar-left {
-        flex: unset;
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-sm);
-    }
-
-    .navbar-right .nav-item span:nth-child(2) {
-        display: none;
-    }
-}
-
-/* Responsive: piccoli dispositivi mobili */
+/* Responsive piccoli dispositivi */
 @media (max-width: 480px) {
-    .navbar-container {
-        padding: var(--spacing-md) var(--spacing-sm);
-    }
-
-    .navbar-right {
+    .nav-items-list {
         gap: var(--spacing-xs);
-    }
-
-    .navbar-right .nav-item span:first-child {
-        display: inline-block;
-    }
-
-    .navbar-right .nav-item {
-        padding: 0.25rem;
-    }
-
-    /* Riduce dimensione icone se necessario */
-    .navbar-right .nav-item .nav-icon svg {
-        font-size: 1rem;
-    }
-
-    .navbar-center {
-        left: 3rem;
-        vertical-align: middle;
+        font-size: var(--spacing-lg);
     }
 }

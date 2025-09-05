@@ -37,66 +37,89 @@
         - Hue (H): tonalità in gradi, ma si possono usare variabili (es: var(--hue-indigo))
     */
 
-    /* HUES */
-    /* o 140 */
-    --hue-green: 150;
-    --hue-violet: 300;
-    --hue-gray: 250;
+    /* Definizione globale delle variabili CSS (custom properties) */
 
-    /* GRIGI (basati su un hue neutro, leggermente caldo) */
-    --color-gray-0: oklch(99% 0.01 var(--hue-gray));
-    /* Sfondo molto chiaro */
-    --color-gray-1: oklch(95% 0.02 var(--hue-gray));
-    --color-gray-2: oklch(88% 0.02 var(--hue-gray));
-    --color-gray-3: oklch(74% 0.02 var(--hue-gray));
-    --color-gray-4: oklch(68% 0.02 var(--hue-gray));
-    --color-gray-5: oklch(63% 0.02 var(--hue-gray));
-    --color-gray-6: oklch(58% 0.02 var(--hue-gray));
-    --color-gray-7: oklch(53% 0.02 var(--hue-gray));
-    --color-gray-8: oklch(49% 0.02 var(--hue-gray));
-    --color-gray-9: oklch(43% 0.02 var(--hue-gray));
-    --color-gray-10: oklch(37% 0.02 var(--hue-gray));
-    --color-gray-11: oklch(31% 0.02 var(--hue-gray));
-    --color-gray-12: oklch(25% 0.02 var(--hue-gray));
-    --color-gray-13: oklch(18% 0.02 var(--hue-gray));
-    --color-gray-14: oklch(15% 0.02 var(--hue-gray));
-    --color-gray-15: oklch(10% 0.02 var(--hue-gray));
+    /* ===== HUES ===== */
+    --hue-green: 140;
+    /* Verde salvia */
+    --hue-purple: 300;
+    /* Viola freddo */
+    --hue-gray: 225;
+    /* Grigio freddo */
 
-    /* VERDI per link e interazione */
-    --color-green-0: oklch(99% 0.03 var(--hue-green));
-    --color-green-1: oklch(95% 0.06 var(--hue-green));
-    --color-green-2: oklch(88% 0.12 var(--hue-green));
-    --color-green-3: oklch(74% 0.14 var(--hue-green));
-    --color-green-4: oklch(68% 0.16 var(--hue-green));
-    --color-green-5: oklch(63% 0.19 var(--hue-green));
-    --color-green-6: oklch(58% 0.2 var(--hue-green));
-    /* Colore principale per i link */
-    --color-green-7: oklch(53% 0.21 var(--hue-green));
-    /* Colore hover */
-    --color-green-8: oklch(49% 0.2 var(--hue-green));
-    --color-green-9: oklch(43% 0.19 var(--hue-green));
-    --color-green-10: oklch(37% 0.17 var(--hue-green));
-    --color-green-11: oklch(31% 0.16 var(--hue-green));
-    --color-green-12: oklch(25% 0.12 var(--hue-green));
-    --color-green-13: oklch(18% 0.09 var(--hue-green));
-    --color-green-14: oklch(15% 0.06 var(--hue-green));
-    --color-green-15: oklch(10% 0.03 var(--hue-green));
+    /* ===== GRIGI ===== */
+    --color-gray-0: oklch(98% 0.01 225);
+    --color-gray-1: oklch(94% 0.01 225);
+    --color-gray-2: oklch(90% 0.01 225);
+    --color-gray-3: oklch(86% 0.01 225);
+    --color-gray-4: oklch(82% 0.01 225);
+    --color-gray-5: oklch(78% 0.01 225);
+    --color-gray-6: oklch(74% 0.01 225);
+    --color-gray-7: oklch(70% 0.01 225);
+    --color-gray-8: oklch(65% 0.01 225);
+    --color-gray-9: oklch(60% 0.01 225);
+    --color-gray-10: oklch(50% 0.01 225);
+    --color-gray-11: oklch(40% 0.01 225);
+    --color-gray-12: oklch(30% 0.01 225);
+    --color-gray-13: oklch(20% 0.01 225);
+    --color-gray-14: oklch(15% 0.01 225);
+    --color-gray-15: oklch(10% 0.01 225);
 
-    /* VIOLA per dettagli e accenti */
-    --color-purple-0: oklch(99% 0.03 var(--hue-violet));
-    --color-purple-1: oklch(95% 0.06 var(--hue-violet));
-    --color-purple-2: oklch(88% 0.12 var(--hue-violet));
-    --color-purple-3: oklch(74% 0.14 var(--hue-violet));
-    --color-purple-4: oklch(68% 0.16 var(--hue-violet));
-    --color-purple-5: oklch(63% 0.19 var(--hue-violet));
-    --color-purple-6: oklch(58% 0.2 var(--hue-violet));
-    --color-purple-7: oklch(53% 0.21 var(--hue-violet));
-    --color-purple-8: oklch(49% 0.2 var(--hue-violet));
-    --color-purple-9: oklch(43% 0.19 var(--hue-violet));
-    --color-purple-10: oklch(37% 0.17 var(--hue-violet));
-    --color-purple-11: oklch(31% 0.16 var(--hue-violet));
-    --color-purple-12: oklch(25% 0.12 var(--hue-violet));
-    --color-purple-13: oklch(18% 0.09 var(--hue-violet));
-    --color-purple-14: oklch(15% 0.06 var(--hue-violet));
-    --color-purple-15: oklch(10% 0.03 var(--hue-violet));
+    /* ===== VERDE SALVIA ===== */
+    --color-green-0: oklch(98% 0.02 140);
+    --color-green-1: oklch(94% 0.03 140);
+    --color-green-2: oklch(90% 0.04 140);
+    --color-green-3: oklch(85% 0.05 140);
+    /* leggermente più scuro per contrasto */
+    --color-green-4: oklch(80% 0.06 140);
+    --color-green-5: oklch(75% 0.07 140);
+    --color-green-6: oklch(70% 0.07 140);
+    --color-green-7: oklch(60% 0.06 140);
+    /* miglior contrasto su sfondo chiaro */
+    --color-green-8: oklch(55% 0.05 140);
+    --color-green-9: oklch(50% 0.05 140);
+    --color-green-10: oklch(45% 0.04 140);
+    --color-green-11: oklch(40% 0.03 140);
+    --color-green-12: oklch(35% 0.03 140);
+    --color-green-13: oklch(25% 0.02 140);
+    --color-green-14: oklch(15% 0.02 140);
+    --color-green-15: oklch(10% 0.02 140);
+
+    /* ===== VIOLA FREDDO ===== */
+    --color-purple-0: oklch(98% 0.03 300);
+    --color-purple-1: oklch(94% 0.06 300);
+    --color-purple-2: oklch(90% 0.08 300);
+    --color-purple-3: oklch(85% 0.10 300);
+    /* più scuro per contrasto */
+    --color-purple-4: oklch(80% 0.12 300);
+    --color-purple-5: oklch(75% 0.14 300);
+    --color-purple-6: oklch(70% 0.15 300);
+    --color-purple-7: oklch(60% 0.14 300);
+    /* leggibile su sfondo chiaro */
+    --color-purple-8: oklch(55% 0.13 300);
+    --color-purple-9: oklch(50% 0.12 300);
+    --color-purple-10: oklch(45% 0.10 300);
+    --color-purple-11: oklch(40% 0.09 300);
+    --color-purple-12: oklch(35% 0.08 300);
+    --color-purple-13: oklch(25% 0.06 300);
+    --color-purple-14: oklch(15% 0.04 300);
+    --color-purple-15: oklch(10% 0.03 300);
+
+    /* ===== NERO E BIANCO ===== */
+    --color-black: oklch(0% 0 0);
+    --color-white: oklch(100% 0 0);
 }
+
+/* Media query per il tema scuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-neutral-bg: var(--color-gray-13);
+        --color-neutral-text: var(--color-gray-0);
+    }
+}
+
+/* colore sfondo light: #F2FCEF 
+   colore testo light: #010405
+   
+   colore sfondo dark: #323f30
+   colore testo light: #f2fafe  */
