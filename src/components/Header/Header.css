@@ -1,5 +1,5 @@
 /* Contenitore principale della navbar */
-.navbar-container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,21 +41,6 @@
     transition: color 0.4s ease, border 0.4s ease-in;
 }
 
-/* Overlay menu mobile */
-.mobile-menu-overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: var(--spacing-zero);
-    left: var(--spacing-zero);
-    width: 100%;
-    height: 100%;
-    padding-top: var(--spacing-xl);
-    z-index: 1;
-}
-
 /* Bottone chiudi overlay */
 .close-menu {
     position: absolute;
@@ -70,7 +55,7 @@
 }
 
 .close-menu svg {
-    color: var(--color-gray-0);
+    color: light-dark(var(--color-gray-15), var(--color-gray-0));
 }
 
 .close-menu svg:hover {
@@ -151,5 +136,21 @@
     .navbar-center {
         left: 3rem;
         vertical-align: middle;
+    }
+
+    /* Overlay menu mobile */
+    .mobile-menu-overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background: rgba(0, 0, 0, 0.9); */
+        background: light-dark(var(--color-green-0), var(--color-green-12));
+        position: fixed;
+        top: var(--spacing-zero);
+        left: var(--spacing-zero);
+        width: 100%;
+        height: 100%;
+        padding-top: var(--spacing-xl);
+        z-index: 1;
     }
 }

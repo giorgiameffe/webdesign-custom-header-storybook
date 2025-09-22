@@ -40,7 +40,7 @@ export const Header = ({
     };
 
     return (
-        <header className="navbar-container" role="banner">
+        <header className="header-container" role="banner">
             {/* Colonna sinistra */}
             <div className="navbar-left">
                 {/* Bottone hamburger per aprire/chiudere overlay mobile */}
