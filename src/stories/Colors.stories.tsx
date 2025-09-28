@@ -5,7 +5,7 @@ import "../styles/colors.css";
 
 // Metadati per Storybook
 const meta: Meta = {
-    title: 'Atoms/Colors', // Titolo della sezione nel pannello di Storybook
+    title: 'Foundations/Colors', // Titolo della sezione nel pannello di Storybook
     tags: ['autodocs']     // Attiva la generazione automatica della documentazione
 }
 

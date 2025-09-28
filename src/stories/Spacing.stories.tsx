@@ -10,7 +10,7 @@ import "../styles/spacing.css";
 // - `tags: ['autodocs']` abilita la documentazione automatica.
 
 const meta: Meta = {
-    title: 'Atoms/Spacing',
+    title: 'Foundations/Spacing',
     parameters: {
         layout: 'centered'
     },

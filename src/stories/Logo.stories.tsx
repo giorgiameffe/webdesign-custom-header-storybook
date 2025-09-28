@@ -7,7 +7,7 @@ import { Logo } from "../components/Logo/Logo";
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Logo> = {
 
-    title: "Components/Logo", // Titolo della sezione nella sidebar di Storybook
+    title: "Components/Atoms/Logo", // Titolo della sezione nella sidebar di Storybook
     component: Logo, // Componente a cui questa story si riferisce
     parameters: {
         layout: "centered", // Centra il componente nella preview

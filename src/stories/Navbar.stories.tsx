@@ -7,7 +7,7 @@ import { Navbar } from "../components/Navbar/Navbar";
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Navbar> = {
 
-    title: "Components/Navbar", // Titolo della sezione nella sidebar di Storybook
+    title: "Components/Molecules/Navbar", // Titolo della sezione nella sidebar di Storybook
     component: Navbar, // Componente a cui questa story si riferisce
     parameters: {
         layout: "centered", // Centra il componente nella preview

@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 // - `tags: ['autodocs']` abilita la documentazione automatica.
 
 const meta: Meta = {
-    title: 'Atoms/Typography',
+    title: 'Foundations/Typography',
     parameters: {
         layout: 'centered'
     },

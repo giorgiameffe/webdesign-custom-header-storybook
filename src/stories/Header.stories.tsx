@@ -11,7 +11,7 @@ import { faUser, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-ico
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Header> = {
 
-    title: "Components/Header", // Titolo della sezione nella sidebar di Storybook
+    title: "Components/Organism/Header", // Titolo della sezione nella sidebar di Storybook
     component: Header, // Componente a cui questa story si riferisce
     parameters: {
         layout: "fullscreen", // La preview occuperà l'intera finestra

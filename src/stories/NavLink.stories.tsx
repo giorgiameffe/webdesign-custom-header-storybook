@@ -13,7 +13,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof NavLink> = {
 
-    title: "Components/NavLink", // Titolo della sezione nella sidebar di Storybook
+    title: "Components/Atoms/NavLink", // Titolo della sezione nella sidebar di Storybook
     component: NavLink, // Componente a cui questa story si riferisce
     parameters: {
         layout: "centered", // Centra il componente nella preview

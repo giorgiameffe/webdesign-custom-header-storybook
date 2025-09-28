@@ -8,7 +8,7 @@ import { Icon } from "../components/Icon/Icon";
 import { faUser, faShoppingBag, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const meta: Meta<typeof Icon> = {
-    title: "Components/Icon",
+    title: "Components/Atoms/Icon",
     component: Icon,
     parameters: {
         layout: "centered",
