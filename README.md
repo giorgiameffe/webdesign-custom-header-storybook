@@ -56,7 +56,7 @@ Struttura secondo Atomic Design:
 |-----------------|-------------------------------|-----------------------------|
 | Verde Salvia    | Colore primario per elementi principali (sfondo, logo in modalità light)   | var(--color-green-0) → var(--color-green-10)       |
 | Grigi Naturali  | Testi               | var(--color-gray-0) → var(--color-gray-15) |
-| Viola Accento   | Stati hover/selected           | var(--color-purple-12)      |
+| Viola Accento   | Stati hover/selected           | var(--color-purple-12) → var(--color-purple-2)     |
 
 💡 La palette è scelta per **accessibilità e armonia visiva**, garantendo leggibilità su **light e dark mode**.
 
