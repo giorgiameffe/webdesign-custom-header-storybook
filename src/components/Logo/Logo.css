@@ -1,6 +1,6 @@
 /* Stile principale del logo */
 #logo {
-    color: light-dark(var(--color-green-10), var(--color-gray-0));
+    color: light-dark(var(--color-green-11), var(--color-gray-0));
     font-size: var(--font-size-h4);
     font-weight: bold;
     border: none;
