@@ -6,7 +6,7 @@ import { Header } from "../components/Header/Header";
 
 // Importa i componenti e le icone di Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faShoppingCart, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faShoppingBag, faHeart } from "@fortawesome/free-solid-svg-icons";
 
 // Configurazione principale del componente per Storybook
 const meta: Meta<typeof Header> = {
@@ -71,7 +71,7 @@ export const InteractiveHeader: Story = {
             {
                 label: "Carrello",
                 onClick: () => console.log("Voce menu Carrello cliccata"),
-                icon: <FontAwesomeIcon icon={faShoppingCart} />
+                icon: <FontAwesomeIcon icon={faShoppingBag} />
             },
             {
                 label: "Wishlist",

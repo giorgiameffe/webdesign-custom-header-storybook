@@ -71,7 +71,7 @@ export const ShoppingBagIcon: Story = {
 export const UserIcon: Story = {
     args: {
         icon: faUser,
-        ariaLabel: "Icona User",
+        ariaLabel: "Icona Utente",
         size: "1.5rem",
     }
 };

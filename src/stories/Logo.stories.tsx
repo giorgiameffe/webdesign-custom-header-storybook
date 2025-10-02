@@ -8,9 +8,9 @@ import { Logo } from "../components/Logo/Logo";
 const meta: Meta<typeof Logo> = {
 
     title: "Components/Atoms/Logo", // Titolo della sezione nella sidebar di Storybook
-    component: Logo, // Componente a cui questa story si riferisce
+    component: Logo,                // Componente a cui questa story si riferisce
     parameters: {
-        layout: "centered", // Centra il componente nella preview
+        layout: "centered",         // Centra il componente nella preview
         docs: {
             description: {
                 component: "Componente che visualizza il nome del brand in forma testuale, usato come logo."

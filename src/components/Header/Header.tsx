@@ -18,8 +18,8 @@ import "./Header.css";
 // Tipizzazione delle props del componente Navbar
 export type HeaderProps = {
     logoText: string;                             // Testo da mostrare al centro nel logo
-    navItemsLeft: NavbarProps["navItems"];  // Array dei link della parte sinistra
-    navItemsRight: NavbarProps["navItems"]; // Array dei link della parte destra
+    navItemsLeft: NavbarProps["navItems"];        // Array dei link della parte sinistra
+    navItemsRight: NavbarProps["navItems"];       // Array dei link della parte destra
 };
 
 // Componente Navbar
